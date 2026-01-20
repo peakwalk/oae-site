@@ -4,6 +4,7 @@
   "private": true,
   "description": "Site of Operator Asset Exchange",
   "scripts": {
+    "build": "echo 'nothing to build'",
     "typecheck": "tsc --noEmit",
     "commit": "cz",
     "push": "git push --follow-tags origin $(git rev-parse --abbrev-ref HEAD)",
