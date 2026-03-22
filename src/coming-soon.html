@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="msapplication-TileColor" content="#0E0E0E"/>
+  <meta name="template-color" content="#0E0E0E"/>
+  <meta name="description" content="Create your Operator Asset Exchange account when access opens on 6 April 2026. Register your interest now for verified operator onboarding."/>
+  <meta name="keywords" content="operator asset exchange, coming soon, oil and gas operators, equipment sourcing"/>
+  <meta name="author" content="Operator Asset Exchange"/>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXHQ24TMF9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YXHQ24TMF9');
+  </script>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/template/favicon.svg"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Operator Asset Exchange | Create an Account</title>
+  <style>
+    .coming-hero {
+      padding: 64px 0 72px;
+      background:
+        radial-gradient(circle at top right, rgba(47, 102, 197, 0.10), transparent 34%),
+        radial-gradient(circle at bottom left, rgba(244, 90, 26, 0.08), transparent 28%),
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+    }
+    .coming-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: 32px;
+      align-items: stretch;
+    }
+    .coming-card,
+    .coming-side-card,
+    .countdown-card,
+    .coming-info-card {
+      background: #fff;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+      border-radius: 24px;
+    }
+    .coming-card {
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .coming-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 6px;
+      background: #356959;
+    }
+    .coming-title {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.05;
+      margin: 0 0 18px;
+      color: #0f172a;
+    }
+    .coming-copy {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #5b6475;
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+    .launch-date-box {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 16px;
+      padding: 14px 18px;
+      border-radius: 16px;
+      background: #f8fbff;
+      border: 1px solid rgba(47, 102, 197, 0.12);
+      margin-bottom: 28px;
+    }
+    .launch-date-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #2F66C5;
+    }
+    .launch-date-value {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .coming-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 0 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+    .coming-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #fbfcfe;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      color: #334155;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .coming-points svg {
+      flex: 0 0 18px;
+      margin-top: 2px;
+      color: #2F66C5;
+    }
+    .coming-form-card {
+      padding: 22px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid rgba(47, 102, 197, 0.10);
+      border-radius: 20px;
+    }
+    .coming-form-card h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      color: #0f172a;
+    }
+    .coming-form-card p {
+      margin: 0 0 18px;
+      color: #5b6475;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    .notify-form-row {
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .notify-form-row .form-control {
+      min-height: 56px;
+      border-radius: 14px;
+      font-size: 16px;
+    }
+    .notify-form-row .btn {
+      min-width: 200px;
+      border-radius: 14px;
+      min-height: 56px;
+      white-space: nowrap;
+    }
+    .form-note {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+    .form-success {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      background: rgba(47, 102, 197, 0.08);
+      color: #204f9f;
+    }
+    .coming-side-stack {
+      display: grid;
+      gap: 18px;
+      height: 100%;
+    }
+    .coming-side-card {
+      padding: 28px;
+    }
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .countdown-card {
+      padding: 18px 12px;
+      text-align: center;
+    }
+    .countdown-number {
+      display: block;
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+    .countdown-label {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #64748b;
+      font-weight: 700;
+    }
+    .coming-side-title {
+      margin: 0 0 10px;
+      font-size: 24px;
+      color: #0f172a;
+    }
+    .coming-side-copy {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #5b6475;
+    }
+    .countdown-support {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #f8fbff;
+      border: 1px solid rgba(47, 102, 197, 0.12);
+      color: #334155;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .coming-mini-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+    .coming-mini-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #334155;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .coming-mini-list .mini-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(47, 102, 197, 0.08);
+      color: #2F66C5;
+      flex: 0 0 38px;
+    }
+    .coming-mini-list .mini-icon.orange {
+      background: rgba(244, 90, 26, 0.10);
+      color: #F45A1A;
+    }
+    .coming-mini-list .mini-icon.yellow {
+      background: rgba(244, 194, 26, 0.14);
+      color: #F4C21A;
+    }
+    .coming-contact-band {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+    .coming-contact-band a {
+      color: #2F66C5;
+      font-weight: 700;
+    }
+    @media (max-width: 1199.98px) {
+      .coming-shell { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 767.98px) {
+      .coming-hero { padding: 42px 0 52px; }
+      .coming-card, .coming-side-card { padding: 22px; }
+      .coming-title { font-size: 34px; }
+      .coming-copy { font-size: 16px; }
+      .coming-points { grid-template-columns: 1fr; }
+      .notify-form-row { flex-direction: column; }
+      .notify-form-row .btn { width: 100%; min-width: 0; }
+      .countdown-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body data-layout-page="sub">
+  <div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+      <div class="preloader-inner position-relative">
+        <div class="page-loading">
+          <div class="page-loading-inner"><div></div><div></div><div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="site-header"></div>
+
+  <main class="main">
+    <section class="section coming-hero">
+      <div class="container">
+        <div class="coming-shell">
+          <div class="coming-card wow animate__animated animate__fadeIn" data-wow-delay=".0s">
+            <h1 class="coming-title">Create your Operator Asset Exchange account</h1>
+            <p class="coming-copy">
+              Account creation opens on 6 April 2026. Register your interest now to be prioritised for verified operator onboarding and early access to the platform when it goes live.
+            </p>
+
+            <div class="launch-date-box" aria-label="Launch date">
+              <span class="launch-date-label">Launch date</span>
+              <span class="launch-date-value" id="launch-date-display">6 April 2026</span>
+            </div>
+
+            <ul class="coming-points">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Verified operator access only, with a clear focus on trust and relevance.
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Faster sourcing visibility for drilling, completion, workover, and surplus equipment.
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Built to reduce standby exposure and improve access to real operator inventory.
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Enterprise rollout options for operators managing equipment across multiple countries.
+              </li>
+            </ul>
+
+            <div class="coming-form-card">
+              <h3>Request early access</h3>
+              <p>Use your company email and we will contact you when verified operator account creation opens for Operator Asset Exchange.</p>
+              <form id="notify-form" novalidate>
+                <div class="notify-form-row">
+                  <input class="form-control" id="notify-email" name="email" type="email" placeholder="Enter your work email" aria-label="Work email" required />
+                  <button class="btn btn-brand-1 hover-up btn-cta" type="submit">Request Early Access</button>
+                </div>
+                <div class="form-note">Use a company email address.</div>
+                <div class="form-success" id="form-success">Thanks. We have captured your request for early access in the page flow. Connect this form to your backend endpoint to store submissions permanently.</div>
+              </form>
+            </div>
+          </div>
+
+          <div class="coming-side-stack">
+            <div class="coming-side-card wow animate__animated animate__fadeIn" data-wow-delay=".1s">
+              <h2 class="coming-side-title">Countdown to account opening</h2>
+              <p class="coming-side-copy">Account creation opens on 6 April 2026. The initial release is focused on verified operator onboarding and the core workflows operators need to source equipment faster.</p>
+              <div class="countdown-grid" id="countdown-grid" aria-label="Countdown to launch">
+                <div class="countdown-card"><span class="countdown-number" data-unit="days">--</span><span class="countdown-label">Days</span></div>
+                <div class="countdown-card"><span class="countdown-number" data-unit="hours">--</span><span class="countdown-label">Hours</span></div>
+                <div class="countdown-card"><span class="countdown-number" data-unit="minutes">--</span><span class="countdown-label">Minutes</span></div>
+                <div class="countdown-card"><span class="countdown-number" data-unit="seconds">--</span><span class="countdown-label">Seconds</span></div>
+              </div>
+              <div class="countdown-support">You will be prioritised for onboarding when access opens. Initial access includes verified operator onboarding, equipment search, urgent sourcing requests, and surplus inventory listings.</div>
+            </div>
+
+            <div class="coming-side-card wow animate__animated animate__fadeIn" data-wow-delay=".2s">
+              <h2 class="coming-side-title">What to expect at launch</h2>
+              <p class="coming-side-copy">The application is designed to help verified operators search available equipment, post urgent requests, and list surplus inventory in one operator-only environment.</p>
+              <ul class="coming-mini-list">
+                <li>
+                  <span class="mini-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F66C5" stroke-width="2"><circle cx="10.5" cy="10.5" r="5.5"></circle><path d="M15 15L20 20"></path></svg>
+                  </span>
+                  <span>Search operator-held equipment across the network.</span>
+                </li>
+                <li>
+                  <span class="mini-icon orange">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F45A1A" stroke-width="2"><path d="M12 4.5L20 18.5H4L12 4.5Z"></path><path d="M12 9V13"></path><path d="M12 16.25H12.01"></path></svg>
+                  </span>
+                  <span>Broadcast urgent sourcing requests to verified operators.</span>
+                </li>
+                <li>
+                  <span class="mini-icon yellow">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4C21A" stroke-width="2"><rect x="5" y="4" width="14" height="4" rx="1"></rect><rect x="5" y="10" width="14" height="4" rx="1"></rect><rect x="5" y="16" width="14" height="4" rx="1"></rect></svg>
+                  </span>
+                  <span>List surplus equipment and create direct operator-to-operator visibility.</span>
+                </li>
+              </ul>
+              <div class="coming-contact-band">
+                Prefer to speak first? Contact <a href="mailto:matt@operatorassetexchange.com">matt@operatorassetexchange.com</a> for onboarding, rollout, or enterprise questions.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/oae-layout.js"></script>
+  <script src="assets/js/vendors/wow.js"></script>
+  <script src="assets/js/main.js?v=7.0.0"></script>
+  <script>
+    (function () {
+      var launchDate = new Date('2026-04-06T09:00:00');
+      var dateDisplay = document.getElementById('launch-date-display');
+      if (dateDisplay) {
+        dateDisplay.textContent = launchDate.toLocaleDateString('en-GB', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        });
+      }
+
+      var units = {
+        days: document.querySelector('[data-unit="days"]'),
+        hours: document.querySelector('[data-unit="hours"]'),
+        minutes: document.querySelector('[data-unit="minutes"]'),
+        seconds: document.querySelector('[data-unit="seconds"]')
+      };
+
+      function updateCountdown() {
+        var now = new Date();
+        var diff = launchDate.getTime() - now.getTime();
+        if (diff <= 0) {
+          units.days.textContent = '0';
+          units.hours.textContent = '0';
+          units.minutes.textContent = '0';
+          units.seconds.textContent = '0';
+          return;
+        }
+        var totalSeconds = Math.floor(diff / 1000);
+        var days = Math.floor(totalSeconds / 86400);
+        var hours = Math.floor((totalSeconds % 86400) / 3600);
+        var minutes = Math.floor((totalSeconds % 3600) / 60);
+        var seconds = totalSeconds % 60;
+        units.days.textContent = days;
+        units.hours.textContent = String(hours).padStart(2, '0');
+        units.minutes.textContent = String(minutes).padStart(2, '0');
+        units.seconds.textContent = String(seconds).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      var form = document.getElementById('notify-form');
+      var success = document.getElementById('form-success');
+      var email = document.getElementById('notify-email');
+      if (form && success && email) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          if (!email.checkValidity()) {
+            email.reportValidity();
+            return;
+          }
+          success.style.display = 'block';
+          form.reset();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

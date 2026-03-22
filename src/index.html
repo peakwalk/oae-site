@@ -1,589 +1,1739 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXHQ24TMF9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-YXHQ24TMF9');
-    </script>
-    <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-            data-cf-beacon='{"token": "b06a2c0d33214e16a9fd395172a0f3ce"}'></script>
-    <!-- End Cloudflare Web Analytics -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-    <title>Operator Asset Exchange | Direct Operator-to-Operator Oilfield Equipment Exchange</title>
-
-    <meta name="description"
-          content="A secure, operator-only platform enabling direct operator-to-operator oilfield equipment exchange. Reduce rig standby, source critical equipment fast, and unlock surplus inventory.">
-    <link rel="canonical" href="https://www.operatorassetexchange.com/">
-    <meta name="robots" content="index, follow">
-
-    <!-- OpenGraph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Operator Asset Exchange">
-    <meta property="og:description"
-          content="Direct operator-to-operator oilfield equipment exchange. Reduce rig standby, source critical equipment fast, and unlock surplus inventory.">
-    <meta property="og:url" content="https://www.operatorassetexchange.com/">
-    <meta property="og:image" content="https://www.operatorassetexchange.com/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Operator Asset Exchange">
-    <meta name="twitter:description"
-          content="Direct operator-to-operator oilfield equipment exchange. Reduce standby and move fast.">
-    <meta name="twitter:image" content="https://www.operatorassetexchange.com/og-image.jpg">
-
-
-    <link rel="preload" as="image" href="./hero-bg.jpg" fetchpriority="high">
-    <link rel="preload" as="image" href="./logo.png">
-    <link rel="preload" as="image" href="./ui-search.jpg">
-    <link rel="preload" as="image" href="./ui-search-results.jpg">
-    <link rel="preload" as="image" href="./ui-login.jpg">
-    <link rel="preload" as="image" href="./search-logistics.jpg">
-    <link rel="preload" as="image" href="./search-port-rig.jpg">
-    <link rel="preload" as="image" href="./urgent-control-room.jpg">
-
-    <link rel="icon" type="image/png" href="./favicon.png">
-    <link rel="apple-touch-icon" href="./favicon.png">
-    <link rel="stylesheet" href="./index.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<meta content="#0E0E0E" name="msapplication-TileColor"/>
+<meta content="#0E0E0E" name="template-color"/>
+<meta content="Operator Asset Exchange helps verified oil and gas operators source critical equipment directly from other operators, post urgent requests, and unlock value from surplus inventory." name="description"/>
+<meta content="operator asset exchange, oilfield equipment, operator network, drilling equipment, urgent sourcing, surplus equipment" name="keywords"/>
+<meta content="Operator Asset Exchange" name="author"/>
+<link href="assets/imgs/template/favicon.svg" rel="shortcut icon" type="image/x-icon"/>
+<link href="style.css" rel="stylesheet"/>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXHQ24TMF9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YXHQ24TMF9');
+  </script>
+  <title>
+   Operator Asset Exchange | Source Oilfield Equipment Directly
+  </title>
 </head>
-<body>
-
-<!-- Add class="" to <body>
-
- for presentation / light mode -->
-
-<header class="topbar">
-    <div class="wrap">
-        <a class="brand" href="#operator-asset-exchange">
-            <img src="./logo.png" alt="Operator Asset Exchange logo" style="width:38px;height:38px;object-fit:contain"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"/><span
-                style="display:none;font-weight:800;font-size:14px;">OAX</span>
-            <span>Operator Asset Exchange</span>
-        </a>
-        <nav aria-label="Primary">
-            <a href="#the-problem">Problem</a>
-            <a href="#the-solution">Solution</a>
-            <a href="#why-it-works">Why it works</a>
-            <a href="#exclusive">Exclusivity</a>
-            <a href="#search-equipment-filter">Features</a>
-            <a href="#subscription">Subscription</a>
-            <a href="#case-studies">Case Studies</a>
-            <a href="#the-team">Team</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
-
-<section class="hero-image" aria-label="Offshore drilling rig during oil and gas operations">
-    <div class="wrap">
-        <div class="hero-kicker">Verified operators only</div>
-
-        <h1>Eliminate standby time by sourcing critical oilfield equipment directly from other operators</h1>
-
-        <p class="lead">
-            Built for operators facing time‑critical equipment shortages or changes in operational plans.
-        </p>
-
-        <div class="cta-row">
-            <a class="btn" href="#search-equipment-filter">Search Available Equipment</a>
-            <a class="btn primary" href="#urgent-sourcing-request">Urgent Equipment Request</a>
-        </div>
-
-        <div class="hero-strip" aria-label="Platform highlights">
-            <div class="hero-strip-card">
-                <span class="hero-strip-label">Direct</span>
-                <strong>Operator-to-operator contact</strong>
-            </div>
-            <div class="hero-strip-card">
-                <span class="hero-strip-label">Immediate</span>
-                <strong>Fast sourcing for critical equipment</strong>
-            </div>
-            <div class="hero-strip-card">
-                <span class="hero-strip-label">Controlled</span>
-                <strong>Exclusive access for verified operators</strong>
-            </div>
-        </div>
-    </div>
+<body data-layout-page="main">
+<div id="preloader-active">
+<div class="preloader d-flex align-items-center justify-content-center">
+<div class="preloader-inner position-relative">
+<div class="page-loading">
+<div class="page-loading-inner">
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Header -->
+<div id="site-header"></div>
+<!-- Mobile Navigation -->
+<!-- Main Content -->
+<main class="main">
+<!-- Hero -->
+<section class="section banner-2 banner-no-bg" id="home">
+<div class="container">
+<div class="banner-1">
+<div class="row align-items-center">
+<div class="col-lg-7">
+<h1 class="color-brand-1">
+         Source Critical Oilfield Equipment Directly From Other Operators
+        </h1>
+<div class="row">
+<div class="col-lg-9 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+<p class="font-md color-grey-500">
+           Reduce rig standby risk by finding available equipment from verified operators worldwide.
+          </p>
+</div>
+</div>
+<div class="mt-30 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+<a class="btn btn-brand-1 hover-up btn-cta me-2" href="coming-soon.html">
+          Create an Account
+         </a>
+<a class="btn btn-border-brand-1 hover-up" href="#contact">
+          Contact the Team
+         </a>
+</div>
+</div>
+<div class="col-lg-5 d-none d-lg-block wow animate__animated animate__fadeIn">
+<div class="box-images-project">
+<div class="box-images wow animate__animated animate__fadeIn">
+<img alt="Operator Asset Exchange" class="img-main-2" src="assets/imgs/page/homepage2/banner.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<main class="wrap iori-main">
-
-    <section id="operator-asset-exchange" class="anchor iori-section intro-section">
-        <div class="trust-strip reveal reveal-up">
-            <span>Verified operators only</span>
-            <span>Direct sourcing</span>
-            <span>Urgent request broadcast</span>
-            <span>Surplus inventory release</span>
-            <span>No middlemen</span>
+<div class="section">
+<div class="container">
+<div class="box-radius-logo">
+<div class="text-center">
+<p class="font-lg color-brand-1 wow animate__animated animate__fadeInUp">
+        Built for operators with drilling, completion, and workover activity worldwide
+       </p>
+</div>
+<div class="mt-30">
+<ul class="list-partners wow animate__animated animate__fadeInUp">
+<li>
+<img alt="Operator Asset Exchange" src="assets/imgs/page/homepage2/Africa.png"/>
+</li>
+<li>
+<img alt="Operator Asset Exchange" src="assets/imgs/page/homepage2/Asia_Pacific.png"/>
+</li>
+<li>
+<img alt="Operator Asset Exchange" src="assets/imgs/page/homepage2/Europe.png"/>
+</li>
+<li>
+<img alt="Operator Asset Exchange" src="assets/imgs/page/homepage2/Middle_East.png"/>
+</li>
+<li>
+<img alt="Operator Asset Exchange" src="assets/imgs/page/homepage2/North_America.png"/>
+</li>
+<li>
+<img alt="Operator Asset Exchange" src="assets/imgs/page/homepage2/Australia.png"/>
+</li>
+<li>
+<img alt="Operator Asset Exchange" src="assets/imgs/page/homepage2/Latin_America.png"/>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Platform Features -->
+<section class="section mt-100" id="features">
+<div class="container">
+<div class="row align-items-end section-unified-heading">
+<div class="col-lg-12 text-center">
+<h2 class="color-brand-1 mb-15 section-title-standard text-center">
+        Platform Features
+       </h2>
+</div>
+</div>
+<div class="row mt-50">
+<div class="col-lg-4 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<svg aria-hidden="true" class="platform-feature-icon" fill="none" stroke="#2F66C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10.5" cy="10.5" r="5.5">
+</circle>
+<path d="M15 15L20 20">
+</path>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Global Equipment Search
+          </h4>
+<p class="font-md color-grey-500">
+           Search available oilfield equipment across operator inventory.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<svg aria-hidden="true" class="platform-feature-icon" fill="none" stroke="#F45A1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4.5L20 18.5H4L12 4.5Z">
+</path>
+<path d="M12 9V13">
+</path>
+<path d="M12 16.25H12.01">
+</path>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Urgent Sourcing Requests
+          </h4>
+<p class="font-md color-grey-500">
+           Broadcast urgent equipment needs across the network.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<svg aria-hidden="true" class="platform-feature-icon" fill="none" stroke="#F4C21A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect height="4" rx="1" width="14" x="5" y="4">
+</rect>
+<rect height="4" rx="1" width="14" x="5" y="10">
+</rect>
+<rect height="4" rx="1" width="14" x="5" y="16">
+</rect>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Sell Surplus Equipment
+          </h4>
+<p class="font-md color-grey-500">
+           List idle equipment and recover value from unused assets.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<svg aria-hidden="true" class="platform-feature-icon" fill="none" stroke="#2F66C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-3z">
+</path>
+<path d="M9.5 12.5l2 2 4-4">
+</path>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Operator-Only Network
+          </h4>
+<p class="font-md color-grey-500">
+           Restricted access for verified oil and gas operators only.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<svg aria-hidden="true" class="platform-feature-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 3c-1 0-2 1-2 2 0 7 6 13 13 13 1 0 2-1 2-2v-2c0-.5-.3-1-.8-1.2l-2.5-1c-.4-.2-.9-.1-1.2.2l-1.5 1.5c-2-1-3.6-2.6-4.6-4.6l1.5-1.5c.3-.3.4-.8.2-1.2l-1-2.5C8.9 3.3 8.5 3 8 3H6z" fill="#F45A1A">
+</path>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Direct Contact
+          </h4>
+<p class="font-md color-grey-500">
+           Connect directly without broker layers or long procurement chains.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<svg aria-hidden="true" class="platform-feature-icon" fill="none" stroke="#F4C21A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7l1.5 1.5L8 6">
+</path>
+<path d="M10 7h10">
+</path>
+<path d="M4 12l1.5 1.5L8 11">
+</path>
+<path d="M10 12h10">
+</path>
+<path d="M4 17l1.5 1.5L8 16">
+</path>
+<path d="M10 17h10">
+</path>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Structured Listings
+          </h4>
+<p class="font-md color-grey-500">
+           Filter by category, condition, location, and need-by date.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section mt-100">
+<div class="container">
+<div class="row align-items-end">
+<div class="col-lg-12 text-center">
+<h2 class="color-brand-1 mb-40 wow animate__animated animate__fadeIn section-title-standard text-center">
+        The Industry Reality
+       </h2>
+</div>
+</div>
+<div class="row mt-50">
+<div class="col-lg-4 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+           Idle Equipment Exists
+          </h4>
+<p class="font-md color-grey-500 mb-0">
+           Operators often hold unused drilling, completion, cementing, and well intervention equipment between campaigns, leaving significant value sitting in storage instead of being redeployed.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+           It Is Hard to Find
+          </h4>
+<p class="font-md color-grey-500 mb-0">
+           That equipment is rarely visible outside each operator’s own organisation, which makes urgent sourcing slower, less transparent, and more dependent on fragmented personal networks.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+           Operators Trust Operators
+          </h4>
+<p class="font-md color-grey-500 mb-0">
+           Direct operator-to-operator contact improves confidence in availability, equipment history, and operational relevance, while making it easier for teams to help each other solve time-critical gaps.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section mt-100">
+<div class="container">
+<div class="row mt-50 align-items-center">
+<div class="col-lg-6 mb-30">
+<div class="title-line mb-10 wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
+        Why the Platform Matters
+       </div>
+<h2 class="color-brand-1 wow animate__animated animate__fadeInUp section-title-standard text-center" data-wow-delay=".2s">
+        Reduce Delays and Unlock Idle Equipment Value
+       </h2>
+</div>
+<div class="col-lg-6 wow animate__animated animate__fadeIn">
+<div class="card-offer card-we-do hover-up">
+<div class="card-image d-flex align-items-center justify-content-center">
+<svg fill="none" height="56" stroke="#2F66C5" stroke-width="1.8" viewbox="0 0 24 24" width="56">
+<circle cx="12" cy="12" r="9">
+</circle>
+<path d="M12 7v5l3 3">
+</path>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+          Reduce Rig Standby Risk
+         </h4>
+<p class="font-md color-grey-500 mb-5">
+          Find critical items before delays escalate.
+         </p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 wow animate__animated animate__fadeIn">
+<div class="card-offer card-we-do hover-up">
+<div class="card-image d-flex align-items-center justify-content-center">
+<svg fill="none" height="56" stroke="#F45A1A" stroke-width="1.8" viewbox="0 0 24 24" width="56">
+<path d="M7 7h10v10H7z">
+</path>
+<path d="M3 12h4m10 0h4M12 3v4m0 10v4">
+</path>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+          Unlock Surplus Value
+         </h4>
+<p class="font-md color-grey-500 mb-5">
+          Move equipment no longer needed by one operator to another who needs it.
+         </p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 wow animate__animated animate__fadeIn">
+<div class="card-offer card-we-do hover-up">
+<div class="card-image d-flex align-items-center justify-content-center">
+<svg fill="none" height="56" stroke="#F4C21A" stroke-width="1.8" viewbox="0 0 24 24" width="56">
+<path d="M4 12h12">
+</path>
+<path d="M12 8l4 4-4 4">
+</path>
+<path d="M4 6h6">
+</path>
+<path d="M4 18h8">
+</path>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+          Accelerate Procurement
+         </h4>
+<p class="font-md color-grey-500 mb-5">
+          Bypass slower traditional sourcing routes with direct operator-to-operator engagement and faster execution
+         </p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 wow animate__animated animate__fadeIn">
+<div class="card-offer card-we-do hover-up">
+<div class="card-image d-flex align-items-center justify-content-center">
+<svg fill="none" height="56" stroke="#2F66C5" stroke-width="1.8" viewbox="0 0 24 24" width="56">
+<rect height="7" width="8" x="3" y="4">
+</rect>
+<rect height="7" width="8" x="13" y="4">
+</rect>
+<rect height="7" width="8" x="3" y="13">
+</rect>
+<rect height="7" width="8" x="13" y="13">
+</rect>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+          Improve Visibility
+         </h4>
+<p class="font-md color-grey-500 mb-5">
+          See available equipment and urgent requests in one place.
+         </p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 wow animate__animated animate__fadeIn">
+<div class="card-offer card-we-do hover-up">
+<div class="card-image d-flex align-items-center justify-content-center">
+<svg fill="none" height="56" stroke="#F45A1A" stroke-width="1.8" viewbox="0 0 24 24" width="56">
+<circle cx="12" cy="12" r="9">
+</circle>
+<path d="M3 12h18">
+</path>
+<path d="M12 3a15 15 0 0 1 0 18">
+</path>
+<path d="M12 3a15 15 0 0 0 0 18">
+</path>
+</svg>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+          Support Global Operations
+         </h4>
+<p class="font-md color-grey-500 mb-5">
+          Search across regions when local supply is limited.
+         </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section mt-100">
+<div class="container">
+<!-- <div class="title-line mb-10 wow animate__animated animate__fadeIn text-center" id="how-it-works">How It Works</div> -->
+<!-- Workflow -->
+<h2 class="color-brand-1 mb-15 wow animate__animated animate__fadeIn text-center section-unified-title section-title-standard" id="how-it-works">
+      A Simple Operator-to-Operator Workflow
+     </h2>
+<p class="font-md color-grey-500 text-center mb-15 wow animate__animated animate__fadeIn section-subtitle-standard">
+      Source equipment fast or unlock value from surplus inventory.
+     </p>
+<div class="row mt-50 align-items-start">
+<div class="col-lg-6">
+<div class="box-workflow-column hover-up">
+<div class="workflow-heading text-center">
+<h4 class="color-brand-1 mb-10">
+          Source Equipment Fast
+         </h4>
+<p class="font-sm color-grey-500 mb-0">
+          For operators needing rapid visibility on available equipment.
+         </p>
+</div>
+<div class="item-number hover-up">
+<div class="num-ele">
+          1
+         </div>
+<div class="info-num">
+<h5 class="color-brand-1 mb-15">
+           Search or Broadcast
+          </h5>
+<p class="font-md color-grey-500">
+           Search available equipment or broadcast an urgent sourcing request.
+          </p>
+</div>
+</div>
+<div class="item-number hover-up">
+<div class="num-ele">
+          2
+         </div>
+<div class="info-num">
+<h5 class="color-brand-1 mb-15">
+           Connect Directly
+          </h5>
+<p class="font-md color-grey-500">
+           Speak directly with the operator holding the equipment.
+          </p>
+</div>
+</div>
+<div class="item-number hover-up mb-0">
+<div class="num-ele">
+          3
+         </div>
+<div class="info-num">
+<h5 class="color-brand-1 mb-15">
+           Secure Equipment Faster
+          </h5>
+<p class="font-md color-grey-500">
+           Reduce downtime and keep operations moving.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="box-workflow-column workflow-secondary hover-up">
+<div class="workflow-heading text-center">
+<h4 class="color-brand-1 mb-10">
+          List &amp; Sell Equipment
+         </h4>
+<p class="font-sm color-grey-500 mb-0">
+          For operators looking to unlock value from surplus inventory.
+         </p>
+</div>
+<div class="item-number hover-up">
+<div class="num-ele">
+          1
+         </div>
+<div class="info-num">
+<h5 class="color-brand-1 mb-15">
+           List Surplus Equipment
+          </h5>
+<p class="font-md color-grey-500">
+           Upload equipment and make it visible to verified operators.
+          </p>
+</div>
+</div>
+<div class="item-number hover-up">
+<div class="num-ele">
+          2
+         </div>
+<div class="info-num">
+<h5 class="color-brand-1 mb-15">
+           Receive Operator Interest
+          </h5>
+<p class="font-md color-grey-500">
+           Other operators discover and contact you directly.
+          </p>
+</div>
+</div>
+<div class="item-number hover-up mb-0">
+<div class="num-ele">
+          3
+         </div>
+<div class="info-num">
+<h5 class="color-brand-1 mb-15">
+           Complete Transaction
+          </h5>
+<p class="font-md color-grey-500">
+           Finalise commercially using your own processes.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Equipment Listed -->
+<section class="section mt-100 example-equipment-listed">
+<div class="container">
+<div class="row align-items-end">
+<div class="col-lg-12 text-center section-unified-heading">
+<h2 class="color-brand-1 mb-15 section-unified-title section-title-standard text-center" id="equipment">
+        Equipment Listed
+       </h2>
+<p class="font-md color-grey-500 mb-0 section-subtitle-standard text-center">
+        Representative examples of equipment that operators may list on the platform.
+       </p>
+</div>
+</div>
+<div class="row mt-50">
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<img alt="Drill Bits" class="equipment-listed-icon" src="assets/imgs/page/homepage2/equipment-icons/01_drill_bits.png"/>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Drill Bits
+          </h4>
+<p class="font-md color-grey-500">
+           Unused PDC and tricone drill bits available from recent drilling campaigns.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<img alt="Drill Pipe" class="equipment-listed-icon" src="assets/imgs/page/homepage2/equipment-icons/02_drill_pipe.png"/>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Drill Pipe
+          </h4>
+<p class="font-md color-grey-500">
+           Selection of surplus drill pipe available in multiple sizes, grades, and connection types.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<img alt="Centralisers" class="equipment-listed-icon" src="assets/imgs/page/homepage2/equipment-icons/03_centralisers.png"/>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Centralisers
+          </h4>
+<p class="font-md color-grey-500">
+           Unused centralisers suitable for upcoming casing runs and inventory backfill.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<img alt="Drilling String Subs" class="equipment-listed-icon" src="assets/imgs/page/homepage2/equipment-icons/04_drill_string_subs.png"/>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Drilling String Subs
+          </h4>
+<p class="font-md color-grey-500">
+           Selected drilling subs of varying connections and diameters available.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<img alt="Completions" class="equipment-listed-icon" src="assets/imgs/page/homepage2/equipment-icons/05_completions.png"/>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Completions
+          </h4>
+<p class="font-md color-grey-500">
+           Packers, accessories, and related completion hardware available from operator stock.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<img alt="Workovers" class="equipment-listed-icon" src="assets/imgs/page/homepage2/equipment-icons/06_workovers.png"/>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Workovers
+          </h4>
+<p class="font-md color-grey-500">
+           Intervention and workover equipment available for near-term operational needs.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<img alt="Cementing" class="equipment-listed-icon" src="assets/imgs/page/homepage2/equipment-icons/07_cementing.png"/>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Cementing
+          </h4>
+<p class="font-md color-grey-500">
+           Cementing support equipment available for well construction and remedial operations.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-center">
+<div class="mb-20">
+<img alt="Well Control" class="equipment-listed-icon" src="assets/imgs/page/homepage2/equipment-icons/08_well_control.png"/>
+</div>
+<div class="card-info">
+<h4 class="color-brand-1 mb-15">
+           Well Control
+          </h4>
+<p class="font-md color-grey-500">
+           Critical pressure-control equipment available for urgent operational requirements.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section mt-100">
+<div class="container">
+<div class="row align-items-end section-unified-heading">
+<div class="col-lg-12 text-center">
+<!-- Use Cases -->
+<h2 class="color-brand-1 mb-15 section-title-standard text-center" id="cases">
+        Use Cases
+       </h2>
+<p class="font-md color-grey-500 mb-0 section-subtitle-standard text-center">
+        Representative examples of how operators may use the platform to resolve equipment sourcing challenges.
+       </p>
+</div>
+</div>
+<div class="row mt-50">
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-start">
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+           Urgent Casing Requirement
+          </h4>
+<span class="tag small-tag small-tag-urgent tag-urgent">
+           Urgent
+          </span>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Problem:
+           </strong>
+<br/>
+           Offshore well risks a 3–5 day delay as 13-3/8" casing for the next section is unavailable locally.
+          </p>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Need:
+           </strong>
+<br/>
+           Fast visibility of compatible casing held by another operator.
+          </p>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Platform:
+           </strong>
+<br/>
+           Broadcast request → find available casing and contact the holder directly.
+          </p>
+<p class="font-sm color-grey-500 mb-0">
+<strong>
+            Outcome:
+           </strong>
+<br/>
+           Casing sourced within 24–48 hours, avoiding standby and keeping the programme on track.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-start">
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+           Surplus Completion Equipment
+          </h4>
+<span class="tag small-tag small-tag-surplus tag-surplus">
+           Surplus
+          </span>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Problem:
+           </strong>
+<br/>
+           Completion hardware (e.g. packers and accessories) sits unused after a campaign.
+          </p>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Need:
+           </strong>
+<br/>
+           Quickly redeploy or monetise idle inventory.
+          </p>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Platform:
+           </strong>
+<br/>
+           List equipment → visible to operators planning completions.
+          </p>
+<p class="font-sm color-grey-500 mb-0">
+<strong>
+            Outcome:
+           </strong>
+<br/>
+           Idle stock converts into value while another operator secures equipment faster.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-start">
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+           ESP Equipment Requirement
+          </h4>
+<span class="tag small-tag small-tag-completions tag-completions">
+           Completions
+          </span>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Problem:
+           </strong>
+<br/>
+           ESP installation at risk due to unavailable motor/protector locally for upcoming slanted well.
+          </p>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Need:
+           </strong>
+<br/>
+           Fast access to compatible ESP components already in operator stock.
+          </p>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Platform:
+           </strong>
+<br/>
+           Search network → identify matches and contact the holding operator.
+          </p>
+<p class="font-sm color-grey-500 mb-0">
+<strong>
+            Outcome:
+           </strong>
+<br/>
+           Installation proceeds on schedule without waiting on external supply delays or disruptions.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card-offer-style-2">
+<div class="card-offer hover-up text-start">
+<div class="card-info">
+<h4 class="color-brand-1 mb-10">
+           Short-Notice Drill Bit Requirement
+          </h4>
+<span class="tag small-tag small-tag-drilling tag-drilling">
+           Drilling
+          </span>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Problem:
+           </strong>
+<br/>
+           Hard formation encountered, rendering the current drill bits unsuitable for further drilling (slow ROP).
+          </p>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Need:
+           </strong>
+<br/>
+           Fast access to suitable drill bits held by another operator.
+          </p>
+<p class="font-sm color-grey-500 mb-10">
+<strong>
+            Platform:
+           </strong>
+<br/>
+           Search and find available bit and contact the owner (operator).
+          </p>
+<p class="font-sm color-grey-500 mb-0">
+<strong>
+            Outcome:
+           </strong>
+<br/>
+           Bit sourced in-country, avoiding rig standby and allowing drilling to continue without unnecessary delays.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section mt-50">
+<div class="container">
+<div class="row mt-50">
+<div class="col-xl-6 col-lg-5">
+<div class="box-images-project">
+<div class="title-line mb-10 wow animate__animated animate__fadeIn">
+         Why Operators Use Operator Asset Exchange
         </div>
-        <div class="iori-banner-shell reveal reveal-up">
-            <div class="iori-banner-copy">
-                <div class="section-label">Operator Asset Exchange</div>
-                <div class="hero-meta">
-                    <span>Operator-only</span>
-                    <span>Direct sourcing</span>
-                    <span>24/7 access</span>
-                </div>
-                <h1>Unused equipment turns into solutions.</h1>
-                <p class="lead">
-                    Direct operator‑to‑operator contact turns unused equipment into immediate answers to other operators
-                    for urgent needs.
-                </p>
-                <div class="cta-row">
-                    <a class="btn" href="#search-equipment-filter">Search Available Equipment</a>
-                    <a class="btn primary" href="#urgent-sourcing-request">Urgent Equipment Request</a>
-                </div>
-            </div>
-            <aside class="iori-banner-media">
-                <div class="preview-window preview-main floating-card">
-                    <img src="./ui-search-results.jpg" alt="Equipment search results interface"/>
-                </div>
-                <div class="preview-stack">
-                    <div class="preview-window floating-card floating-delay-1">
-                        <img src="./ui-search.jpg" alt="Equipment search interface"/>
-                    </div>
-                    <div class="preview-window floating-card floating-delay-2">
-                        <img src="./ui-login.jpg" alt="Operator login interface"/>
-                    </div>
-                </div>
-            </aside>
-        </div>
-    </section>
-
-    <section id="the-problem" class="anchor iori-section">
-        <div class="iori-split section-problem">
-            <div class="section-copy reveal reveal-left">
-                <div class="section-label">Context</div>
-                <h2>The Problem</h2>
-                <p class="sub">Surplus meets shortage</p>
-            </div>
-            <div class="text-columns">
-                <article class="text-panel reveal reveal-up">
-                    <h3>Problem</h3>
-                    <ul class="clean">
-                        <li>Drilling and workover campaigns end with unused equipment draining capital and storage.</li>
-                        <li>Operational challenges create urgent, last‑minute demand for critical equipment.</li>
-                        <li>Existing channels using subcontractors, agents and brokers are slow, costly, and opaque.</li>
-                    </ul>
-                </article>
-                <article class="text-panel emphasis-panel reveal reveal-up reveal-delay-1">
-                    <h3>Result</h3>
-                    <ul class="clean">
-                        <li>Lost operational time with drilling and workover rigs left on standby.</li>
-                        <li>Frozen capital due to unused and unneeded equipment being left in storage in yards and warehouse.</li>
-                        <li>Delays to get production back online or to release the rig off contract.</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="the-solution" class="anchor iori-section feature-panel">
-        <div class="section-head reveal reveal-up">
-            <div>
-                <div class="section-label">Platform</div>
-                <h2>The Solution</h2>
-                <p class="sub">The Operator Asset Exchange platform.</p>
-            </div>
-        </div>
-        <div class="solution-text">
-            <article class="plain-item reveal reveal-up">
-                <h3>Direct connections</h3>
-                <p>Digital marketplace enabling direct operator‑to‑operator connections.</p>
-            </article>
-            <article class="plain-item reveal reveal-up reveal-delay-1">
-                <h3>Immediate outcomes</h3>
-                <p>Acquire or relinquish equipment instantly to keep operations moving.</p>
-            </article>
-            <article class="solution-statement reveal reveal-right reveal-delay-2">
-                <h3>Minimise rigs going into standby.</h3>
-                <p>No middlemen, no delays, no markups.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="why-it-works" class="anchor iori-section">
-        <div class="section-head reveal reveal-up">
-            <div>
-                <div class="section-label">Benefits</div>
-                <h2>Why It Works</h2>
-                <p class="sub">A simple approach that benefits all</p>
-            </div>
-        </div>
-        <div class="benefit-columns">
-            <article class="plain-item reveal reveal-up">
-                <h3>Save time</h3>
-                <p>Immediate access to available equipment.</p>
-            </article>
-            <article class="plain-item reveal reveal-up reveal-delay-1">
-                <h3>Free up capital</h3>
-                <p>Convert unused inventory into value.</p>
-            </article>
-            <article class="plain-item reveal reveal-up reveal-delay-2">
-                <h3>Lower costs</h3>
-                <p>Direct, trusted operator purchase — no markups.</p>
-            </article>
-            <article class="plain-item reveal reveal-up">
-                <h3>Always current</h3>
-                <p>Always up‑to‑date inventory, available 24/7 globally.</p>
-            </article>
-            <article class="plain-item reveal reveal-up reveal-delay-1">
-                <h3>Everyone wins</h3>
-                <p>When one operator’s surplus meets another’s shortage, everyone wins.</p>
-            </article>
-            <article class="plain-item reveal reveal-up reveal-delay-2">
-                <h3>Exclusive Access</h3>
-                <p>Only operators have access to the inventory of equipment.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="exclusive" class="anchor iori-section we-do-section">
-        <div class="iori-split">
-            <div class="section-copy reveal reveal-left">
-                <div class="section-label">Access model</div>
-                <h2>Exclusive</h2>
-                <p class="sub">Exclusively available to verified operators only</p>
-            </div>
-            <div class="plain-list">
-                <article class="plain-item reveal reveal-up">
-                    <h3>Verified access</h3>
-                    <p>Access restricted to verified oil &amp; gas operators only.</p>
-                </article>
-                <article class="plain-item reveal reveal-up reveal-delay-1">
-                    <h3>Operator community</h3>
-                    <p>Listings, requests, and communications stay within the operator network.</p>
-                </article>
-                <article class="plain-item reveal reveal-up reveal-delay-2">
-                    <h3>No intermediaries</h3>
-                    <p>No brokers, no agents — every interaction is operator‑to‑operator.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="search-equipment-filter" class="anchor iori-section feature-panel">
-        <div class="section-head reveal reveal-up">
-            <div>
-                <div class="section-label">Search workflow</div>
-                <h2>Search Equipment</h2>
-                <p class="sub">A simple search experience with easy filtering that gets you to the right equipment fast.</p>
-            </div>
-        </div>
-        <div class="media-feature-layout">
-            <article class="feature-visual reveal reveal-left">
-                <img src="./search-logistics.jpg" alt="Industrial logistics warehouse and handling systems"/>
-                <img src="./search-port-rig.jpg" alt="Port and offshore oil rig operations"/>
-            </article>
-            <div class="plain-list">
-                <article class="plain-item reveal reveal-up">
-                    <h3>Powerful search</h3>
-                    <p>Google style search — type what you need and get instant results.</p>
-                </article>
-                <article class="plain-item reveal reveal-up reveal-delay-1">
-                    <h3>Filter precisely</h3>
-                    <p>Use filters to quickly pinpoint the exact equipment you need.</p>
-                </article>
-                <article class="plain-item reveal reveal-up reveal-delay-2">
-                    <h3>Connect directly</h3>
-                    <p>Discuss technical specs, pricing, and logistics direct with the operator.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="urgent-sourcing-request" class="anchor iori-section">
-        <div class="iori-step-shell">
-            <div class="step-media reveal reveal-left">
-                <div class="preview-window preview-main floating-card">
-                    <img src="./urgent-control-room.jpg" alt="Engine control room and industrial operations interface"/>
-                </div>
-            </div>
-            <div class="step-copy reveal reveal-right">
-                <div class="section-label">Urgent sourcing</div>
-                <h2>Urgent Sourcing Request</h2>
-                <p class="sub">Submit an urgent equipment request and instantly alert every operator.</p>
-                <div class="numbered-list">
-                    <div class="numbered-item">
-                        <span>1</span>
-                        <div>
-                            <h3>Broadcast instantly</h3>
-                            <p>Send an urgent equipment request to the entire operator network.</p>
-                        </div>
-                    </div>
-                    <div class="numbered-item">
-                        <span>2</span>
-                        <div>
-                            <h3>Maximise response speed</h3>
-                            <p>Reach multiple operators at once for rapid replies on availability, specs, and logistics.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sell-equipment" class="anchor iori-section">
-        <div class="section-head reveal reveal-up">
-            <div>
-                <div class="section-label">Surplus release</div>
-                <h2>Sell Equipment</h2>
-                <p class="sub">Sell surplus equipment no longer needed and free up capital and yard space.</p>
-            </div>
-        </div>
-        <div class="benefit-columns compact-benefits">
-            <article class="plain-item reveal reveal-up">
-                <h3>List what is available</h3>
-                <p>Publish surplus inventory from completed or reduced-scope drilling campaigns.</p>
-            </article>
-            <article class="plain-item reveal reveal-up reveal-delay-1">
-                <h3>Reach verified operators</h3>
-                <p>Keep visibility inside the operator network rather than pushing inventory through brokers.</p>
-            </article>
-            <article class="plain-item reveal reveal-up reveal-delay-2">
-                <h3>Recover value faster</h3>
-                <p>Free up capital, yard space, and warehouse space through direct operator-to-operator engagement.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="why-time-matters-in-oilfield-operations" class="anchor iori-section stats-section">
-        <div class="stats-copy reveal reveal-left">
-            <div class="section-label">Operational urgency</div>
-            <h2>Why Time Matters in Oilfield Operations</h2>
-            <p class="sub">Every delay in operations results in higher costs and a measurable increase in operational risk.</p>
-        </div>
-        <div class="plain-list">
-            <article class="plain-item reveal reveal-up">
-                <strong>Plans change fast</strong>
-                <p>Changing plans demand rapid sourcing of additional equipment.</p>
-            </article>
-            <article class="plain-item reveal reveal-up reveal-delay-1">
-                <strong>Prevent standby</strong>
-                <p>Waiting creates costly standby time — fast delivery keeps operations moving.</p>
-            </article>
-            <article class="plain-item reveal reveal-up reveal-delay-2">
-                <strong>Fast delivery</strong>
-                <p>Once sourced, equipment must be quickly and exactly delivered.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="breaking-the-mold-comparison" class="anchor iori-section">
-        <div class="section-head reveal reveal-up">
-            <div>
-                <div class="section-label">Comparison</div>
-                <h2>Breaking the Mold</h2>
-                <p class="sub">Positioning against traditional channels.</p>
-            </div>
-        </div>
-        <div class="text-columns comparison-columns">
-            <article class="text-panel reveal reveal-up">
-                <h3>No broker-led opacity</h3>
-                <p>Transparent and direct engagement without third party gatekeepers.</p>
-            </article>
-            <article class="text-panel reveal reveal-up reveal-delay-1">
-                <h3>No forced pricing</h3>
-                <p>Operator-controlled engagement — discuss pricing and further details directly.</p>
-            </article>
-            <article class="text-panel emphasis-panel reveal reveal-right reveal-delay-2">
-                <h3>Faster execution</h3>
-                <p>Faster discovery, equipment specifications and decisions without middleman delays.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="subscription" class="anchor iori-section plan-section">
-        <div class="section-head reveal reveal-up">
-            <div>
-                <div class="section-label">Commercial model</div>
-                <h2>Subscription</h2>
-                <p class="sub">Full access for one simple monthly fee</p>
-            </div>
-        </div>
-        <div class="plan-grid">
-            <article class="plan-card reveal reveal-up">
-                <div class="plan-head">
-                    <h3>Access</h3>
-                    <p>Operator-only platform access</p>
-                </div>
-                <ul class="clean plan-list">
-                    <li>Online 24/7</li>
-                    <li>Global availability on desktops, laptops, tablets and mobile phones</li>
-                    <li>Controlled verified users ensures 100% exclusive operator access.</li>
-                </ul>
-            </article>
-            <article class="plan-card featured-plan reveal reveal-up reveal-delay-1">
-                <p class="plan-kicker">Recommended</p>
-                <div class="plan-head">
-                    <h3>What you get</h3>
-                    <p>One simple monthly fee</p>
-                </div>
-                <ul class="clean plan-list">
-                    <li>Fixed monthly fee</li>
-                    <li>No markups or commissions. One price with everything included.</li>
-                    <li>Transactions are completed offline between operators.</li>
-                </ul>
-            </article>
-            <article class="plan-card reveal reveal-up reveal-delay-2">
-                <div class="plan-head">
-                    <h3>Terms</h3>
-                    <p>Commercial flexibility</p>
-                </div>
-                <ul class="clean plan-list">
-                    <li>Cancel anytime</li>
-                    <li>No contracts to tie you down.</li>
-                    <li>No minimum contract duration.</li>
-                </ul>
-            </article>
-        </div>
-    </section>
-
-    <section id="case-studies" class="anchor iori-section">
-        <div class="section-head reveal reveal-up">
-            <div>
-                <div class="section-label">Proof points</div>
-                <h2>Case Studies</h2>
-                <p class="sub">Examples of operators solving critical operational challenges using <b>Operator Asset Exchange.</b></p>
-            </div>
-        </div>
-        <div class="case-grid">
-            <article class="case-story featured-story reveal reveal-up">
-                <div class="case-media">
-                    <img src="./search-port-rig.jpg" alt="Port and offshore support operations related to critical equipment movement"/>
-                </div>
-                <p class="case-kicker">Featured case study</p>
-                <h3>Operator Asset Exchange Eliminates Critical Casing Delay</h3>
-                <p>An offshore operator faced major difficulties running 9-5/8” casing through thinly laminated, unstable shales. The casing could not reach bottom, forcing a much shallower setting depth and leaving a long rathole that complicated the cement job as well as the next hole section.</p>
-                <p>With the next well in the batch sequence designed the same, the drilling team determined that a reamer shoe was essential to avoid repeating the problem. However, the next casing run was less than a week away, and no suitable reamer shoe was available locally.</p>
-                <p>Using Operator Asset Exchange, the Drilling Superintendent instantly identified a compatible reamer shoe held by an operator in a neighbouring country. Direct communication enabled rapid confirmation and a same-day commercial agreement.</p>
-                <p>The tool was dispatched the next morning and arrived in time, allowing the casing to be successfully run to bottom and preventing costly operational delays.</p>
-            </article>
-            <div class="case-summary-list">
-                <article class="case-story compact-story reveal reveal-up reveal-delay-1">
-                    <p class="case-kicker">Inventory release</p>
-                    <h3>Operator Asset Exchange Unlocks Value from Surplus Well Inventory</h3>
-                    <p>An operator reduced a five-well development program to three wells, leaving a large volume of unused well construction consumables.</p>
-                    <p>By listing surplus inventory on Operator Asset Exchange, the operator sold most items quickly to other operators, freeing capital and clearing valuable yard space.</p>
-                </article>
-                <article class="case-story compact-story reveal reveal-up reveal-delay-2">
-                    <p class="case-kicker">Urgent completion</p>
-                    <h3>Operator Asset Exchange Accelerates Sidetrack &amp; ESP Completion Delivery</h3>
-                    <p>A redesigned sidetrack and ESP completion required several critical items that were not part of the original appraisal well plan.</p>
-                    <p>The drilling and completions teams sourced key equipment directly from other operators in time to complete the well and bring it online without delay.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="the-team" class="anchor iori-section feature-panel">
-        <div class="section-head reveal reveal-up">
-            <div>
-                <div class="section-label">Leadership</div>
-                <h2>The Team</h2>
-                <p class="sub">Built by oilfield and SaaS professionals.</p>
-            </div>
-        </div>
-        <div class="team-columns">
-            <article class="team-bio reveal reveal-up">
-                <h3>Matt</h3>
-                <p>25 years in the oil &amp; gas industry. Designed &amp; built B2B SaaS platforms for operators and service companies.</p>
-            </article>
-            <article class="team-bio reveal reveal-up reveal-delay-1">
-                <h3>Edison</h3>
-                <p>20 years programming SaaS platforms with 12 years’ experience with oilfield software applications.</p>
-            </article>
-            <article class="team-bio reveal reveal-up reveal-delay-2">
-                <h3>Investors</h3>
-                <p>Private equity groups and investors equipped with upstream oilfield knowledge, strategic insight, and global connectivity.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="contact" class="anchor iori-section contact-section">
-        <div class="contact-banner reveal reveal-up">
-            <div class="contact-copy">
-                <div class="section-label">Get in touch</div>
-                <h2>Contact</h2>
-                <p class="sub">
-                    Direct operator‑to‑operator equipment exchange to <b>reduce standby</b> and keep operations moving.
-                    <br>
-                    Offload <b>excess</b> equipment at the end of a drilling campaign and free up capital.
-                </p>
-            </div>
-            <div class="contact-panel">
-                <h3>Primary contact</h3>
-                <div id="emails" class="contact-list"></div>
-            </div>
-        </div>
-        <script>
-            const contacts = [
-                {name: "Matt", user: "matt"},
-                {name: "Jack", user: "jack"},
-                {name: "Jason", user: "jason"}
-            ];
-
-            const domain = "operatorassetexchange.com";
-            const container = document.getElementById("emails");
-
-            contacts.forEach(c => {
-                const email = `${c.user}@${domain}`;
-                const link = document.createElement("a");
-                link.href = `mailto:${email}`;
-                link.textContent = email;
-
-                const line = document.createElement("div");
-                line.textContent = `${c.name} — `;
-                line.appendChild(link);
-
-                container.appendChild(line);
-            });
-        </script>
-    </section>
-
-    <footer class="footer">
-        <div>
-            <div>© <span id="y">2026</span> Operator Asset Exchange. All rights reserved.</div>
-            <div>
-                <a href="#operator-asset-exchange">Back to top</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const revealItems = document.querySelectorAll('.reveal');
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        if (reduceMotion) {
-            revealItems.forEach((item) => item.classList.add('is-visible'));
-        } else {
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add('is-visible');
-                    obs.unobserve(entry.target);
-                });
-            }, {
-                threshold: 0.14,
-                rootMargin: '0px 0px -8% 0px'
-            });
-
-            revealItems.forEach((item) => observer.observe(item));
-        }
-    </script>
+<h2 class="color-brand-1 mb-25 wow animate__animated animate__fadeIn section-title-standard text-center">
+         Built for Fast, Direct Equipment Sourcing
+        </h2>
+<p class="color-grey-500 mb-15 wow animate__animated animate__fadeIn">
+         Operator Asset Exchange is built for oil and gas operators that need faster visibility on available equipment, a direct route to other operators, and a more efficient way to resolve urgent sourcing gaps while recovering value from surplus inventory.
+        </p>
+</div>
+</div>
+<div class="col-xl-6 col-lg-7">
+<div class="row pt-40">
+<div class="col-lg-6 col-md-6">
+<div class="cardNumber wow animate__animated animate__zoomIn card-number-custom">
+<div class="outcome-card-accent outcome-card-accent-blue">
+</div>
+<div class="card-head uniform-card-text">
+           Faster sourcing
+          </div>
+<div class="card-description">
+           for critical equipment
+          </div>
+</div>
+<div class="cardNumber wow animate__animated animate__zoomIn card-number-custom">
+<div class="outcome-card-accent outcome-card-accent-orange">
+</div>
+<div class="card-head uniform-card-text">
+           Direct engagement
+          </div>
+<div class="card-description">
+           operator-to-operator contact
+          </div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="cardNumber wow animate__animated animate__zoomIn card-number-custom">
+<div class="outcome-card-accent outcome-card-accent-yellow">
+</div>
+<div class="card-head uniform-card-text">
+           Reduced reliance
+          </div>
+<div class="card-description">
+           on fragmented networks
+          </div>
+</div>
+<div class="cardNumber wow animate__animated animate__zoomIn card-number-custom">
+<div class="outcome-card-accent outcome-card-accent-green">
+</div>
+<div class="card-head uniform-card-text">
+           Better visibility
+          </div>
+<div class="card-description">
+           of available inventory
+          </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section mt-100">
+<div class="container">
+<div class="row align-items-end section-unified-heading">
+<div class="col-lg-12 text-center">
+<h2 class="color-brand-1 mb-15 section-title-standard text-center" id="faq">
+        Frequently Asked Questions
+       </h2>
+<p class="font-md color-grey-500 mb-0 section-subtitle-standard text-center">
+        Key decisions operators typically evaluate before joining the platform.
+       </p>
+</div>
+</div>
+<div class="row mt-50 justify-content-center">
+<div class="col-lg-8">
+<div aria-label="Frequently asked questions" class="faq-accordion">
+<div class="faq-item active">
+<button aria-controls="faq-answer-1" aria-expanded="true" class="faq-question" id="faq-question-1" type="button">
+<span>
+           Who is allowed to access the platform?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-1" class="faq-answer" id="faq-answer-1">
+<p class="font-md color-grey-500">
+           Access is restricted strictly to verified oil and gas operators. Every account is reviewed to maintain a closed, operator-only environment.
+          </p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-controls="faq-answer-2" aria-expanded="false" class="faq-question" id="faq-question-2" type="button">
+<span>
+           How quickly can we get access after signing up?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-2" class="faq-answer" id="faq-answer-2">
+<p class="font-md color-grey-500">
+           Verification is typically completed within 1 hour, allowing teams to begin searching, listing, and connecting quickly.
+          </p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-controls="faq-answer-3" aria-expanded="false" class="faq-question" id="faq-question-3" type="button">
+<span>
+           Are brokers, traders, or service companies involved?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-3" class="faq-answer" id="faq-answer-3">
+<p class="font-md color-grey-500">
+           No. The platform is designed exclusively for operator-to-operator interaction, with no intermediaries or third parties.
+          </p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-controls="faq-answer-4" aria-expanded="false" class="faq-question" id="faq-question-4" type="button">
+<span>
+           Do we control what equipment and information is shared?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-4" class="faq-answer" id="faq-answer-4">
+<p class="font-md color-grey-500">
+           Yes. Operators retain control over listings, visibility, and the level of detail shared. Nothing is exposed without your decision.
+          </p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-controls="faq-answer-5" aria-expanded="false" class="faq-question" id="faq-question-5" type="button">
+<span>
+           How fast can we respond to urgent equipment gaps?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-5" class="faq-answer" id="faq-answer-5">
+<p class="font-md color-grey-500">
+           Urgent requests are distributed across the network almost immediately after a brief QC step, helping teams identify available equipment faster than traditional phone-and-email sourcing.
+          </p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-controls="faq-answer-6" aria-expanded="false" class="faq-question" id="faq-question-6" type="button">
+<span>
+           How are transactions actually completed?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-6" class="faq-answer" id="faq-answer-6">
+<p class="font-md color-grey-500">
+           The platform enables discovery and direct contact. Commercial terms, contracts, logistics, and procurement steps are handled directly between the operators involved.
+          </p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-controls="faq-answer-7" aria-expanded="false" class="faq-question" id="faq-question-7" type="button">
+<span>
+           Can we source equipment outside our region?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-7" class="faq-answer" id="faq-answer-7">
+<p class="font-md color-grey-500">
+           Yes. The platform is global, allowing operators to identify equipment across regions when local availability is limited.
+          </p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-controls="faq-answer-8" aria-expanded="false" class="faq-question" id="faq-question-8" type="button">
+<span>
+           What is the commercial model and cost structure?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-8" class="faq-answer" id="faq-answer-8">
+<p class="font-md color-grey-500">
+           Operator Asset Exchange is subscription-based. There are no commissions, brokerage fees, or transaction charges, and commercial terms stay between operators.
+          </p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-controls="faq-answer-9" aria-expanded="false" class="faq-question" id="faq-question-9" type="button">
+<span>
+           Can we actively broadcast urgent sourcing needs?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-9" class="faq-answer" id="faq-answer-9">
+<p class="font-md color-grey-500">
+           Yes. Operators can post urgent sourcing requests to rapidly locate critical equipment across the network.
+          </p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-controls="faq-answer-10" aria-expanded="false" class="faq-question" id="faq-question-10" type="button">
+<span>
+           Can we review previous requests on the platform?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-10" class="faq-answer" id="faq-answer-10">
+<p class="font-md color-grey-500">
+           Yes. Previous requests can remain visible to help operators understand demand patterns and support better sourcing and inventory decisions.
+          </p>
+</div>
+</div>
+<div class="faq-item">
+<button aria-controls="faq-answer-11" aria-expanded="false" class="faq-question" id="faq-question-11" type="button">
+<span>
+           Is there any long-term commitment or lock-in?
+          </span>
+<span aria-hidden="true" class="faq-icon">
+</span>
+</button>
+<div aria-labelledby="faq-question-11" class="faq-answer" id="faq-answer-11">
+<p class="font-md color-grey-500">
+           No. The platform offers an initial 6-month free trial with no long-term lock-in. Operators are expected to list a minimum of 10 equipment items to support network liquidity.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing -->
+<section class="section mt-50 pt-110 pb-110 pricing-membership-section">
+<div class="container">
+<div class="row align-items-center justify-content-center section-unified-heading">
+<div class="col-lg-10 text-center">
+<h2 class="color-brand-1 mb-15 wow animate__animated animate__fadeIn section-title-standard text-center" data-wow-delay=".0s" id="pricing">
+        Choose How You Use the Platform
+       </h2>
+<p class="font-lg color-grey-500 wow animate__animated animate__fadeIn section-subtitle-standard text-center" data-wow-delay=".2s">
+        Access the operator network for external sourcing or connect internal teams across countries.
+       </p>
+</div>
+</div>
+<div class="row mt-50 justify-content-center pricing-cards-row align-items-stretch">
+<div class="col-xl-5 col-lg-6 col-md-10 wow animate__animated animate__fadeIn pricing-card-col" data-wow-delay=".0s">
+<div class="card-plan card-plan-2 hover-up pricing-card pricing-membership-card pricing-card-primary-emphasis">
+<span class="card-badge">
+         Most operators start here
+        </span>
+<div class="card-image-plan">
+<div class="icon-plan bg-1">
+<svg fill="none" stroke="#2F66C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="8" r="3">
+</circle>
+<path d="M5 18c0-3 3-5 7-5s7 2 7 5">
+</path>
+</svg>
+</div>
+<div class="info-plan">
+<h4 class="color-brand-1">
+           Operator Network Access
+          </h4>
+<p class="font-md color-grey-400">
+           External operator-to-operator sourcing
+          </p>
+</div>
+</div>
+<div class="box-day-trial box-trial-two">
+<div class="trial-col-1">
+<span class="font-lg-bold color-brand-1">
+           First 6 months free
+          </span>
+<br/>
+<span class="font-md color-grey-500">
+           Then subscription-based
+          </span>
+</div>
+<div class="d-none d-sm-inline-block header-cta">
+<a class="btn btn-brand-1 hover-up btn-cta" href="coming-soon.html">
+           Start Free Access
+          </a>
+</div>
+</div>
+<div class="mt-30 mb-25 pricing-card-body">
+<div class="mb-20">
+<h6 class="color-brand-1 mb-10">
+           Who this is for
+          </h6>
+<p class="font-md color-grey-500 mb-0">
+           Verified operators that need fast access to equipment held by other operators, urgent sourcing support, and direct operator-to-operator contact.
+          </p>
+</div>
+<div class="mb-20">
+<h6 class="color-brand-1 mb-10">
+           What you can do
+          </h6>
+<ul class="list-ticks list-ticks-2">
+<li>
+<svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+            Search equipment across operator inventory
+           </li>
+<li>
+<svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+            Broadcast urgent sourcing requests
+           </li>
+<li>
+<svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+            Connect directly with other operators
+           </li>
+<li>
+<svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+            List surplus equipment and recover value
+           </li>
+</ul>
+</div>
+<div class="mb-0">
+<h6 class="color-brand-1 mb-10">
+           Key advantage
+          </h6>
+<p class="font-md color-grey-500 mb-0">
+           Reduce sourcing time and standby exposure by accessing real operator inventory directly instead of relying only on fragmented networks.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-5 col-lg-6 mt-30 mt-lg-0 wow animate__animated animate__fadeIn pricing-card-col" data-wow-delay=".2s">
+<div class="card-plan card-plan-2 pricing-card pricing-support-card pricing-enterprise-card pricing-card-secondary-emphasis">
+<span class="card-badge pricing-badge-enterprise">
+         Enterprise
+        </span>
+<div class="card-image-plan">
+<div class="icon-plan bg-2">
+<svg fill="none" stroke="#F45A1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect height="6" rx="1.5" width="6" x="3" y="4">
+</rect>
+<rect height="6" rx="1.5" width="6" x="15" y="4">
+</rect>
+<rect height="6" rx="1.5" width="6" x="3" y="14">
+</rect>
+<rect height="6" rx="1.5" width="6" x="15" y="14">
+</rect>
+<path d="M9 7h6">
+</path>
+<path d="M9 17h6">
+</path>
+<path d="M6 10v4">
+</path>
+<path d="M18 10v4">
+</path>
+</svg>
+</div>
+<div class="info-plan">
+<h4 class="color-brand-1">
+           Enterprise (Internal Visibility)
+          </h4>
+<p class="font-md color-grey-400">
+           Internal equipment redeployment across countries
+          </p>
+</div>
+</div>
+<div class="box-day-trial box-trial-two">
+<div class="trial-col-1">
+<span class="font-lg-bold color-brand-1">
+           Custom enterprise setup
+          </span>
+<br/>
+<span class="font-md color-grey-500">
+           Contact for pricing
+          </span>
+</div>
+</div>
+<div class="mt-30 mb-25 pricing-card-body">
+<div class="mb-20">
+<h6 class="color-brand-1 mb-10">
+           Who this is for
+          </h6>
+<p class="font-md color-grey-500 mb-0">
+           Operators with multiple country entities or business units that want visibility of internal equipment before sourcing externally.
+          </p>
+</div>
+<div class="mb-20">
+<h6 class="color-brand-1 mb-10">
+           What it solves
+          </h6>
+<ul class="list-ticks list-ticks-2">
+<li>
+<svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+            Limited visibility of idle or surplus equipment across the group
+           </li>
+<li>
+<svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+            Outdated or incomplete internal inventory records
+           </li>
+<li>
+<svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+            Duplicate buying when usable equipment already exists elsewhere
+           </li>
+</ul>
+</div>
+<div class="mb-20">
+<h6 class="color-brand-1 mb-10">
+           Enterprise impact
+          </h6>
+<ul class="list-ticks list-ticks-2">
+<li>
+<svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+            Better group-wide visibility of available equipment
+           </li>
+<li>
+<svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+            Faster internal redeployment of idle assets
+           </li>
+<li>
+<svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+</path>
+</svg>
+            Reduced unnecessary procurement and standby exposure
+           </li>
+</ul>
+</div>
+<div class="pricing-enterprise-action">
+<a class="btn btn-brand-1-outline btn-enterprise-cta hover-up" href="#contact">
+<b>
+              Talk to Our Team About Enterprise →
+            </b>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team -->
+<section class="section mt-90 team-section-unified">
+<div class="container">
+<div class="row justify-content-center section-unified-heading">
+<div class="col-lg-10 text-center">
+<h2 class="color-brand-1 mb-15 wow animate__animated animate__fadeIn section-title-standard text-center" data-wow-delay=".2s">
+        Meet the team
+       </h2>
+<p class="font-md color-grey-500 section-subtitle-standard text-center">
+        Built by oil and gas professionals and software leaders with deep operational and delivery experience.
+       </p>
+</div>
+</div>
+<div class="row align-items-start">
+<div class="col-lg-3 col-md-4 col-sm-6 wow animate__animated animate__fadeIn" data-wow-delay=".0s">
+<div class="card-team mb-30">
+<div class="card-image">
+<div aria-label="Matt initials badge" class="team-badge team-blue">
+          ML
+         </div>
+</div>
+<div class="card-info">
+<span class="font-lg">
+          Matt
+         </span>
+<p class="font-xs color-grey-200 mb-10">
+          Founder
+         </p>
+<p class="font-sm color-grey-400 team-bio">
+          Matt brings 25 years of oilfield experience across drilling, completions, geology, and technical advisory roles, combined with over 30 years of software development experience since the mid-1990s, building SaaS platforms, mobile applications, and data management systems that align technology with real operational needs.
+         </p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
+<div class="card-team mb-30">
+<div class="card-image">
+<div aria-label="Edison initials badge" class="team-badge team-orange">
+          E
+         </div>
+</div>
+<div class="card-info">
+<span class="font-lg">
+          Edison
+         </span>
+<p class="font-xs color-grey-200 mb-10">
+          Chief Technology Officer
+         </p>
+<p class="font-sm color-grey-400 team-bio">
+          Edison brings over 20 years of software development experience spanning engineering, system architecture, DevOps, and agile delivery, leading technology teams to build scalable, business-aligned platforms while leveraging his entrepreneurial background and enterprise collaboration experience to drive innovation, execution, and long-term growth.
+         </p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 wow animate__animated animate__fadeIn" data-wow-delay=".4s">
+<div class="card-team mb-30">
+<div class="card-image">
+<div aria-label="Jason initials badge" class="team-badge team-yellow">
+          JL
+         </div>
+</div>
+<div class="card-info">
+<span class="font-lg">
+          Jason
+         </span>
+<p class="font-xs color-grey-200 mb-10">
+          Sales
+         </p>
+<p class="font-sm color-grey-400 team-bio">
+          Jason is a highly experienced oil and gas operations professional with over 30 years in drilling fluids, cementing, and operational management, known for solving complex well challenges, optimizing performance, and building strong stakeholder relationships across global onshore and offshore environments.
+         </p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 wow animate__animated animate__fadeIn" data-wow-delay=".4s">
+<div class="card-team mb-30">
+<div class="card-image">
+<div aria-label="Malcolm initials badge" class="team-badge team-blue">
+          MW
+         </div>
+</div>
+<div class="card-info">
+<span class="font-lg">
+          Malcolm
+         </span>
+<p class="font-xs color-grey-200 mb-10">
+          Marketing
+         </p>
+<p class="font-sm color-grey-400 team-bio">
+          Malcolm is a drilling consultant and fishing specialist with over 30+ years experience in well troubleshooting, equipment recovery, and field operations, leveraging his deep technical and commercial background to translate real operational challenges into credible, operator-focused messaging and practical use cases that drive platform adoption.
+         </p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 wow animate__animated animate__fadeIn" data-wow-delay=".6s">
+<div class="card-team mb-30">
+<div class="card-image">
+<div aria-label="Jack initials badge" class="team-badge team-orange">
+          JB
+         </div>
+</div>
+<div class="card-info">
+<span class="font-lg">
+          Jack
+         </span>
+<p class="font-xs color-grey-200 mb-10">
+          Operations &amp; Industry Delivery
+         </p>
+<p class="font-sm color-grey-400 team-bio">
+          Jack has over 15 years of offshore and onshore supervisory experience across drilling, completions, workover, and P&amp;A, using his global operational background and strong safety leadership to ensure the platform reflects real field workflows and delivers practical value to operators.
+         </p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-6 wow animate__animated animate__fadeIn" data-wow-delay=".8s">
+<div class="card-team mb-30">
+<div class="card-image">
+<div aria-label="Robert initials badge" class="team-badge team-yellow">
+          RS
+         </div>
+</div>
+<div class="card-info">
+<span class="font-lg">
+          Robert
+         </span>
+<p class="font-xs color-grey-200 mb-10">
+          Customer Success Lead
+         </p>
+<p class="font-sm color-grey-400 team-bio">
+          Robert leverages over 10 years offshore logistics, shorebase management, and operational experience to engage operators, guide them through real use cases, and ensure they realise tangible value from the platform, driving adoption, retention, and conversion from trial to paid subscription.
+         </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Request Access -->
+<section class="section mt-100 access-decision-section" id="contact-form">
+<div class="container">
+<div class="text-center mb-50 section-unified-heading section-unified-heading--compact">
+<h2 class="color-brand-1 mb-15 section-title-standard text-center" id="contact">
+       Request Access
+      </h2>
+<p class="font-md color-grey-500 section-subtitle-standard text-center">
+       Create an account or speak to the team
+      </p>
+</div>
+<div class="access-decision-wrap">
+<div class="row g-4 access-decision-grid">
+<div class="col-lg-6 mb-30 access-card-col">
+<div class="access-card access-card-primary h-100">
+<div class="access-card-header">
+<div aria-hidden="true" class="access-card-icon access-card-icon-primary">
+<svg fill="none" stroke="#2F66C5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="8" r="3">
+</circle>
+<path d="M5 18c0-3 3-5 7-5s7 2 7 5">
+</path>
+</svg>
+</div>
+<div class="access-card-title-group">
+<h4 class="color-brand-1 mb-5">
+            Create an Account
+           </h4>
+<p class="font-md color-grey-500 mb-0">
+            Best for operators ready to get access immediately
+           </p>
+</div>
+</div>
+<div class="access-card-highlight access-card-highlight-primary">
+<span class="access-highlight-title">
+           Start with the free 6-month trial
+          </span>
+<span class="font-md color-grey-500">
+           Fastest path to verification and live platform access
+          </span>
+</div>
+<div class="access-card-body">
+<div>
+<ul class="access-list">
+<li>
+             Get verified and onboarded quickly
+            </li>
+<li>
+             Search equipment and post urgent requests
+            </li>
+<li>
+             List surplus equipment and connect directly with operators
+            </li>
+</ul>
+</div>
+<div class="access-proof-list">
+<div class="access-proof-item">
+<strong>
+             No payment required
+            </strong>
+            to start the trial
+           </div>
+<div class="access-proof-item">
+<strong>
+             No minimum sign-up term
+            </strong>
+</div>
+<div class="access-proof-item">
+<strong>
+             All accounts are verified
+            </strong>
+            before access is granted
+           </div>
+</div>
+<div class="access-card-action">
+<a class="btn btn-brand-1 hover-up btn-cta access-primary-button" href="coming-soon.html">
+            Create an Account
+           </a>
+<p class="access-microcopy mb-0">
+            Fastest way to get started.
+           </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 mb-30 access-card-col">
+<div class="access-card access-card-secondary h-100">
+<div class="access-card-header">
+<div aria-hidden="true" class="access-card-icon access-card-icon-secondary">
+<svg fill="none" stroke="#F45A1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16v10H7l-3 3V6z">
+</path>
+<path d="M8 10h8">
+</path>
+<path d="M8 13h5">
+</path>
+</svg>
+</div>
+<div class="access-card-title-group">
+<h4 class="color-brand-1 mb-5">
+            Contact the Team
+           </h4>
+<p class="font-md color-grey-500 mb-0">
+            Best for operators who want to confirm fit first
+           </p>
+</div>
+</div>
+<div class="access-card-highlight access-card-highlight-secondary">
+<span class="access-highlight-title">
+           Prefer to speak first?
+          </span>
+<span class="font-md color-grey-500">
+           Direct contact for onboarding, fit, and rollout questions
+          </span>
+</div>
+<div class="access-card-body">
+<div>
+<ul class="access-list">
+<li>
+             Check operator eligibility before signing up
+            </li>
+<li>
+             Discuss onboarding, use cases, or rollout questions
+            </li>
+<li>
+             Reach the most relevant team member directly
+            </li>
+</ul>
+</div>
+<div class="access-proof-list access-proof-list-secondary">
+<div class="access-proof-item">
+<strong>
+             Direct access
+            </strong>
+            to the core team
+           </div>
+<div class="access-proof-item">
+<strong>
+             Fast responses
+            </strong>
+            on fit and onboarding
+           </div>
+<div class="access-proof-item">
+<strong>
+             No obligation
+            </strong>
+            to register
+           </div>
+</div>
+<div class="access-contact-box">
+<p class="font-sm color-grey-500 mb-10">
+            Email the team directly to confirm fit, onboarding, or next steps.
+           </p>
+<p class="access-contact-item">
+<span class="access-contact-name">
+             Matt (Founder) —
+            </span>
+<a class="access-contact-email" href="mailto:matt@operatorassetexchange.com">
+             matt@operatorassetexchange.com
+            </a>
+</p>
+<p class="access-contact-item">
+<span class="access-contact-name">
+             Jason (Sales) —
+            </span>
+<a class="access-contact-email" href="mailto:jason@operatorassetexchange.com">
+             jason@operatorassetexchange.com
+            </a>
+</p>
+<p class="access-contact-item mb-0">
+<span class="access-contact-name">
+             Malcolm (Marketing) —
+            </span>
+<a class="access-contact-email" href="mailto:malcolm@operatorassetexchange.com">
+             malcolm@operatorassetexchange.com
+            </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 </main>
+<!-- Footer -->
+<div id="site-footer"></div>
+<script src="assets/js/oae-layout.js"></script>
+<script src="assets/js/vendors/wow.js"></script>
+<script src="assets/js/main.js?v=7.0.0"></script>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+  var faqButtons = document.querySelectorAll(".faq-question");
+
+  faqButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var item = button.closest(".faq-item");
+      var isOpen = item.classList.contains("active");
+
+      document.querySelectorAll(".faq-item").forEach(function (faqItem) {
+        faqItem.classList.remove("active");
+        var faqButton = faqItem.querySelector(".faq-question");
+        if (faqButton) {
+          faqButton.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      if (!isOpen) {
+        item.classList.add("active");
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+});
+  </script>
 </body>
 </html>

@@ -1,0 +1,901 @@
+/* ==== BEGIN oae-contact-vs-register-conversion-v2-access-icons-matched.css ==== */
+
+/* Request Access / Create Account decision module */
+
+.access-decision-section {
+  position: relative;
+}
+
+.access-decision-wrap {
+  background: linear-gradient(180deg, rgba(47, 102, 197, 0.05) 0%, #ffffff 100%);
+  border: 1px solid rgba(47, 102, 197, 0.10);
+  border-radius: 28px;
+  padding: 34px 28px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+}
+
+.access-decision-intro {
+  max-width: 780px;
+  margin: 0 auto 30px;
+}
+
+.access-decision-eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(47, 102, 197, 0.08);
+  color: #2F66C5;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.access-decision-grid {
+  align-items: stretch;
+}
+
+.access-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  padding: 30px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.access-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 46px rgba(15, 23, 42, 0.12);
+}
+
+.access-card-primary {
+  border: 2px solid rgba(47, 102, 197, 0.22);
+}
+
+.access-card-secondary {
+  border: 2px solid rgba(244, 90, 26, 0.18);
+}
+
+.access-card-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2F66C5, #1f57bb);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 10px 20px rgba(47, 102, 197, 0.22);
+}
+
+.access-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 96px;
+}
+
+.access-card-icon {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.access-card-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.access-card-icon-primary {
+  background: rgba(47, 102, 197, 0.08);
+}
+
+.access-card-icon-secondary {
+  background: rgba(244, 90, 26, 0.09);
+}
+
+.access-card-title-group {
+  min-width: 0;
+}
+
+.access-card-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 18px 0 22px;
+  padding: 16px 18px;
+  border-radius: 18px;
+}
+
+.access-card-highlight-primary {
+  background: linear-gradient(135deg, rgba(47, 102, 197, 0.08), rgba(47, 102, 197, 0.03));
+  border: 1px solid rgba(47, 102, 197, 0.08);
+}
+
+.access-card-highlight-secondary {
+  background: linear-gradient(135deg, rgba(244, 90, 26, 0.08), rgba(244, 90, 26, 0.03));
+  border: 1px solid rgba(244, 90, 26, 0.10);
+}
+
+.access-highlight-title {
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.access-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  flex: 1 1 auto;
+}
+
+.access-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.access-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: #374151;
+  line-height: 1.55;
+}
+
+.access-list li:last-child {
+  margin-bottom: 0;
+}
+
+.access-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2F66C5;
+  transform: translateY(-50%);
+}
+
+.access-card-secondary .access-list li::before {
+  background: #F45A1A;
+}
+
+.access-proof-list {
+  display: grid;
+  gap: 10px;
+}
+
+.access-proof-item {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #f7f9fc;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.access-card-action {
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.access-primary-button {
+  width: 100%;
+}
+
+.access-microcopy {
+  margin-top: 12px;
+  color: #374151;
+  font-size: 13px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.access-microcopy-left {
+  text-align: left;
+  margin-top: auto;
+}
+
+.access-contact-box {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fffaf7, #fffdfa);
+  border: 1px solid rgba(244, 90, 26, 0.10);
+}
+
+.access-contact-item {
+  margin: 0 0 10px;
+  line-height: 1.45;
+}
+
+.access-contact-box a {
+  color: #2F66C5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.access-contact-box a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+  .access-decision-wrap {
+    padding: 24px 18px;
+    border-radius: 22px;
+  }
+
+  .access-card {
+    padding: 24px;
+  }
+
+  .access-card-header {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .access-card-header {
+    align-items: flex-start;
+  }
+
+  .access-card-icon {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+  }
+
+  .access-card-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .access-highlight-title {
+    font-size: 18px;
+  }
+}
+
+
+/* Unified section headings and section rhythm */
+.section-unified-heading {
+  margin-bottom: 42px;
+}
+
+.section-unified-heading .color-brand-1,
+.section-unified-title {
+  font-size: 34px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.section-unified-heading p {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.65;
+}
+
+.section-unified-heading--compact {
+  margin-bottom: 30px;
+}
+
+.section-unified-heading--team {
+  margin-bottom: 46px;
+}
+
+.team-section-unified .card-team {
+  height: 100%;
+}
+
+.team-section-unified .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team-section-unified .card-info .font-xs.color-grey-200 {
+  margin-bottom: 0 !important;
+}
+
+#features .card-offer,
+#cases .card-offer,
+.pricing-membership-section .pricing-card,
+.team-section-unified .card-team,
+.access-card,
+.faq-accordion {
+  border-radius: 24px;
+}
+
+@media (max-width: 991.98px) {
+  .section-unified-heading .color-brand-1,
+  .section-unified-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-unified-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-unified-heading .color-brand-1,
+  .section-unified-title {
+    font-size: 26px;
+  }
+}
+
+
+/* Why Operators Use Operator Asset Exchange — replace coloured dots with accent bars */
+.card-number-custom {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 28px 26px;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-number-custom:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.12);
+}
+
+.card-number-custom .outcome-card-accent {
+  display: block;
+  width: calc(100% + 56px);
+  height: 6px;
+  margin: -30px -28px 22px;
+  border-radius: 22px 22px 0 0;
+}
+
+.card-number-custom .outcome-card-accent-blue {
+  background: #2F66C5;
+}
+
+.card-number-custom .outcome-card-accent-orange {
+  background: #F45A1A;
+}
+
+.card-number-custom .outcome-card-accent-yellow {
+  background: #F4C21A;
+}
+
+.card-number-custom .outcome-card-accent-green {
+  background: #356959;
+}
+
+.card-number-custom .card-head {
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.card-number-custom .card-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+@media (max-width: 575.98px) {
+  .card-number-custom {
+    padding: 26px 22px 22px;
+  }
+
+  .card-number-custom .outcome-card-accent {
+    width: calc(100% + 44px);
+    margin: -26px -22px 18px;
+  }
+
+  .card-number-custom .card-head {
+    font-size: 18px;
+  }
+}
+
+
+/* Match Request Access icons to Operator Membership icon treatment */
+.pricing-membership-section .icon-plan,
+.access-card-icon {
+  width: 74px;
+  height: 74px;
+  min-width: 74px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.pricing-membership-section .icon-plan svg,
+.access-card-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.pricing-membership-section .bg-1,
+.access-card-icon-primary {
+  background: rgba(47, 102, 197, 0.10);
+  border: 1px solid rgba(47, 102, 197, 0.14);
+}
+
+.pricing-membership-section .bg-2,
+.access-card-icon-secondary {
+  background: rgba(244, 90, 26, 0.10);
+  border: 1px solid rgba(244, 90, 26, 0.14);
+}
+
+@media (max-width: 575.98px) {
+  .pricing-membership-section .icon-plan,
+  .access-card-icon {
+    width: 68px;
+    height: 68px;
+    min-width: 68px;
+    border-radius: 18px;
+  }
+
+  .pricing-membership-section .icon-plan svg,
+  .access-card-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+/* ==== END oae-contact-vs-register-conversion-v2-access-icons-matched.css ==== */
+
+
+/* ==== BEGIN oae-contact-card-balance-enterprise.css ==== */
+
+.access-decision-grid {
+  align-items: stretch;
+}
+
+.access-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.access-card-primary {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.access-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 18px;
+}
+
+.access-card-action {
+  margin-top: auto;
+}
+
+.access-card-action .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.access-proof-list-secondary {
+  margin-top: 0;
+}
+
+.access-secondary-button {
+  display: inline-flex;
+  align-items: center;
+}
+
+.access-contact-role {
+  color: #6b7280;
+}
+
+@media (max-width: 991.98px) {
+  .access-card-primary {
+    transform: none;
+  }
+}
+
+
+.access-decision-grid > [class*="col-"] {
+  display: flex;
+}
+
+.access-card-col {
+  display: flex;
+}
+
+.access-card-highlight,
+.access-contact-box,
+.access-proof-list {
+  width: 100%;
+}
+
+.access-contact-box {
+  margin-bottom: 20px;
+}
+
+.access-card-action-secondary .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+
+.access-decision-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.access-decision-grid > [class*="col-"] {
+  display: flex;
+  align-self: stretch;
+}
+
+.access-card {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .access-card {
+    min-height: 100%;
+  }
+}
+
+
+/* Strong equal-height card structure */
+.access-decision-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.access-decision-grid > [class*="col-"] {
+  display: flex;
+  align-self: stretch;
+}
+
+.access-card-col {
+  display: flex;
+}
+
+.access-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.access-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.access-card-action,
+.access-card-action-secondary {
+  margin-top: auto;
+}
+
+.access-card-header,
+.access-card-highlight,
+.access-proof-list,
+.access-contact-box,
+.access-card-action {
+  width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .access-decision-grid,
+  .access-decision-grid > [class*="col-"],
+  .access-card-col,
+  .access-card {
+    display: block;
+    height: auto;
+    min-height: 0;
+  }
+}
+
+
+.team-bio {
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+.card-team .card-info > span.font-lg {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.card-team .card-info p:first-of-type {
+  margin-bottom: 8px;
+}
+
+
+.pricing-enterprise-card .icon-plan svg {
+  width: 24px;
+  height: 24px;
+}
+
+.pricing-enterprise-card .list-ticks li {
+  align-items: flex-start;
+}
+
+
+/* ==== END oae-contact-card-balance-enterprise.css ==== */
+
+
+/* ==== BEGIN oae_contact_cards_full_website_refactored.css ==== */
+
+/* --------------------------------------------------------------------------
+   Operator Asset Exchange - Custom overrides / refinements
+   Refactored from the attached custom stylesheet:
+   - duplicate equal-height rules consolidated
+   - shared button styles grouped
+   - pricing, team, and access section overrides organised by component
+   -------------------------------------------------------------------------- */
+
+/* Section subtitle consistency */
+.section-subtitle-standard {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Request Access
+   -------------------------------------------------------------------------- */
+
+.access-decision-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.access-decision-grid > [class*="col-"],
+.access-card-col {
+  display: flex;
+  align-self: stretch;
+}
+
+.access-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.access-card-primary {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.access-card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.access-card-header,
+.access-card-highlight,
+.access-proof-list,
+.access-contact-box,
+.access-card-action {
+  width: 100%;
+}
+
+.access-card-action,
+.access-card-action-secondary {
+  margin-top: auto;
+}
+
+.access-card-action .btn,
+.access-card-action-secondary .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.access-card-highlight,
+.access-proof-list,
+.access-contact-box {
+  width: 100%;
+}
+
+.access-proof-list-secondary {
+  margin-top: 0;
+}
+
+.access-contact-box {
+  margin-bottom: 20px;
+}
+
+.access-secondary-button {
+  display: inline-flex;
+  align-items: center;
+}
+
+.access-contact-role {
+  color: #6b7280;
+}
+
+@media (max-width: 991.98px) {
+  .access-card-primary {
+    transform: none;
+  }
+
+  .access-decision-grid,
+  .access-decision-grid > [class*="col-"],
+  .access-card-col,
+  .access-card {
+    display: block;
+    height: auto;
+    min-height: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Team
+   -------------------------------------------------------------------------- */
+
+.team-bio {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.card-team .card-info > span.font-lg {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.card-team .card-info p:first-of-type {
+  margin-bottom: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Pricing
+   -------------------------------------------------------------------------- */
+
+.pricing-membership-section .pricing-card-col {
+  display: flex;
+}
+
+.pricing-membership-section .pricing-card {
+  width: 100%;
+}
+
+.pricing-membership-section .pricing-card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pricing-membership-section .list-ticks li,
+.pricing-enterprise-card .list-ticks li {
+  align-items: flex-start;
+}
+
+.pricing-enterprise-card .icon-plan svg {
+  width: 24px;
+  height: 24px;
+}
+
+.pricing-card-primary-emphasis {
+  position: relative;
+  z-index: 2;
+  transform: scale(1.03);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-card-secondary-emphasis {
+  position: relative;
+}
+
+.pricing-mode-label {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 18px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.pricing-mode-label-network {
+  color: #2F66C5;
+  background: rgba(47, 102, 197, 0.10);
+}
+
+.pricing-mode-label-enterprise {
+  color: #F45A1A;
+  background: rgba(244, 90, 26, 0.10);
+}
+
+.pricing-badge-enterprise {
+  background: #F45A1A;
+}
+
+.pricing-enterprise-action {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.pricing-enterprise-action .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 991.98px) {
+  .pricing-card-primary-emphasis {
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+
+.btn-brand-1-outline,
+.btn-enterprise-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-brand-1-outline {
+  background-color: #ffffff;
+  color: #2F66C5;
+  border: 2px solid #2F66C5;
+}
+
+.btn-brand-1-outline:hover {
+  background-color: #2F66C5;
+  color: #ffffff;
+}
+
+.btn-enterprise-cta {
+  background-color: #ffffff;
+  color: #2F66C5;
+  border: 2px solid #2F66C5;
+  box-shadow: 0 8px 20px rgba(47, 102, 197, 0.15);
+}
+
+.btn-enterprise-cta:hover {
+  background-color: #2F66C5;
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(47, 102, 197, 0.25);
+  transform: translateY(-1px);
+}
+
+
+/* ==== END oae_contact_cards_full_website_refactored.css ==== */
+
+
+/* register_display_corrected.css was not present in the provided ZIP, so no extra register-only overrides could be merged from that file. */
