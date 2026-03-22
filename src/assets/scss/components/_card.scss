@@ -146,7 +146,7 @@
 }
 .card-plan {
     border-radius: 8px;
-    padding: 30px;
+    padding: 32px;
     background-color: $color-white;
     border: 1px solid $color-gray-80;
     margin-bottom: 30px;
@@ -158,7 +158,6 @@
     }
     .card-image-plan {
         display: flex;
-        align-items: center;
         .icon-plan {
             max-width: 82px;
             min-width: 82px;

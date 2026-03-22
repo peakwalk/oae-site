@@ -760,7 +760,7 @@
 
 .team-bio {
   color: #6b7280;
-  line-height: 1.6;
+  line-height: 1.6 !important;
 }
 
 .card-team .card-info > span.font-lg {
@@ -835,6 +835,16 @@
 
 .pricing-badge-enterprise {
   background: #F45A1A;
+}
+
+.pricing-membership-section .pricing-membership-card .header-cta,
+.pricing-membership-section .pricing-support-card .header-cta {
+  margin-left: 20px;
+}
+
+.pricing-membership-section .pricing-membership-card .box-trial-two,
+.pricing-membership-section .pricing-support-card .box-trial-two {
+  gap: 20px;
 }
 
 .pricing-enterprise-action {

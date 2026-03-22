@@ -510,14 +510,31 @@ html {
   width:100%;
 }
 .pricing-membership-section .list-ticks{
+  display:flex;
+  flex-wrap:wrap;
   margin-bottom:0;
+  padding-left:0;
+  list-style:none;
 }
 .pricing-membership-section .list-ticks li{
+  width:50%;
+  color:#3D565F;
+  font-size:14px;
+  line-height:18px;
+  margin-bottom:18px;
   display:flex;
   align-items:flex-start;
   gap:10px;
+  list-style:none;
+}
+.pricing-membership-section .list-ticks.list-ticks-2 li{
+  width:100%;
+}
+.pricing-membership-section .list-ticks.list-ticks-2 li:last-child{
+  margin-bottom:0;
 }
 .pricing-membership-section .list-ticks li svg{
+  color:#06D6A0;
   flex:0 0 16px;
   width:16px;
   height:16px;
