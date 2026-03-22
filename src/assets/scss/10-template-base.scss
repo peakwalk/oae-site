@@ -1,0 +1,35 @@
+/***
+ Theme Name: iori
+ Description: Trimmed template base for the OAE public site
+***/
+
+// Configuration and helpers
+@use "abstracts";
+
+// Base
+@use "base/common";
+@use "base/animation";
+@use "base/typography";
+
+// Shared components used by the current site
+@use "components/buttons";
+@use "components/form";
+@use "components/card";
+@use "components/misc";
+@use "components/banners";
+
+// Theme tokens
+@use "themes/default";
+
+// Shared layout
+@use "layout/header";
+@use "layout/navigation";
+@use "layout/footer";
+@use "layout/spacing";
+
+// Page-specific partials still needed by the current site
+@use "pages/homepage2";
+@use "pages/register";
+
+// Responsive rules remain centralized for the first migration pass.
+@use "layout/responsive";

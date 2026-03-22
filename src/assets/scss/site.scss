@@ -1,0 +1,85 @@
+@use "sass:meta";
+
+/* Active stylesheet order:
+   vendors -> plugins -> template base scss -> OAE custom -> legacy overrides */
+@import url("../css/00-vendors.css");
+@import url("../css/01-plugins.css");
+@include meta.load-css("10-template-base");
+@import url("../css/20-oae-custom.css");
+@import url("../css/90-legacy-overrides.css");
+
+/* Register page spacing fix */
+html, body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main.main {
+  flex: 1 0 auto;
+}
+
+.box-page-register {
+  padding: 56px 0 40px;
+  min-height: calc(100vh - 190px);
+  display: flex;
+  align-items: center;
+}
+
+.box-page-register > .container {
+  width: 100%;
+}
+
+.box-page-register .row {
+  align-items: stretch;
+}
+
+.box-steps-small,
+.box-register {
+  height: 100%;
+}
+
+.box-steps-small {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+  padding: 34px 36px;
+}
+
+.box-register .line-register {
+  margin-bottom: 28px !important;
+  background: linear-gradient(90deg, #2F66C5, #F45A1A, #F4C21A) !important;
+  height: 5px;
+}
+
+.box-register .form-control {
+  min-height: 52px;
+  border-radius: 12px;
+}
+
+.box-register .cb-container {
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.55;
+}
+
+.box-register .cb-container input[type="checkbox"] {
+  margin-top: 4px;
+  position: static;
+  opacity: 1;
+  width: 16px;
+  height: 16px;
+}

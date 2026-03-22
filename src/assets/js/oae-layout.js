@@ -1,4 +1,6 @@
 (function () {
+  var logoUrl = new URL('../imgs/template/logo.png', import.meta.url).toString();
+
   function buildHeader(page) {
     var isMain = page === 'main';
     var homeFile = 'index.html';
@@ -12,7 +14,7 @@
       <div class="header-left header-left-next">
         <div class="header-logo header-logo-next">
           <a class="d-flex" href="${homeFile}">
-            <img alt="Operator Asset Exchange" src="assets/imgs/template/logo.png"/>
+            <img alt="Operator Asset Exchange" src="${logoUrl}"/>
           </a>
         </div>
       </div>
@@ -30,7 +32,7 @@
           </ul>
         </nav>
       </div>
-      <div class="header-right-next">
+      <div class="header-right header-right-next">
         <div class="burger-icon burger-icon-white burger-next d-xl-none">
           <span class="burger-icon-top"></span>
           <span class="burger-icon-mid"></span>
@@ -46,7 +48,7 @@
       <div class="mobile-nav-top">
         <div class="mobile-nav-brand">
           <div class="brand-left">
-            <img alt="Operator Asset Exchange" src="assets/imgs/template/logo.png"/>
+            <img alt="Operator Asset Exchange" src="${logoUrl}"/>
             <div class="mobile-brand-copy">
               <div class="eyebrow">Operator-only platform</div>
               <div class="title">Operator Asset Exchange</div>
