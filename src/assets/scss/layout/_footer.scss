@@ -60,8 +60,12 @@
 	width: 56px;
     height: 56px;
     color: $color-white;
+    position: fixed;
     right: 20px;
     bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
     text-align: center;
     text-decoration: none;
@@ -69,8 +73,25 @@
     z-index: 999 !important;
     border: 0;
     background-color: #fff;
-    transition-duration: 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    cursor: pointer;
+    transform: translateY(10px);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.16);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
     background-color: $color-brand-1;
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
     i {
         display: block;
         line-height: 56px !important;
