@@ -155,16 +155,6 @@
       font-size: 13px;
       color: #6b7280;
     }
-    .form-success {
-      display: none;
-      margin-top: 14px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      font-size: 14px;
-      font-weight: 600;
-      background: rgba(47, 102, 197, 0.08);
-      color: #204f9f;
-    }
     .coming-side-stack {
       display: grid;
       gap: 18px;
@@ -334,7 +324,6 @@
                   <button class="btn btn-brand-1 hover-up btn-cta" type="submit">Request Early Access</button>
                 </div>
                 <div class="form-note">Use a company email address.</div>
-                <div class="form-success" id="form-success">Thanks. We have captured your request for early access in the page flow. Connect this form to your backend endpoint to store submissions permanently.</div>
               </form>
             </div>
           </div>
@@ -434,17 +423,42 @@
       setInterval(updateCountdown, 1000);
 
       var form = document.getElementById('notify-form');
-      var success = document.getElementById('form-success');
       var email = document.getElementById('notify-email');
-      if (form && success && email) {
+      if (form && email) {
         form.addEventListener('submit', function (event) {
           event.preventDefault();
-          if (!email.checkValidity()) {
-            email.reportValidity();
+          var emailValue = email.value.trim();
+          email.value = emailValue;
+
+          if (!emailValue || !email.checkValidity()) {
+            if (typeof email.reportValidity === 'function') {
+              email.reportValidity();
+            } else {
+              email.focus();
+            }
             return;
           }
-          success.style.display = 'block';
-          form.reset();
+
+          var subject = 'Website - Notification';
+          var body = [
+            'Hello Matt,',
+            '',
+            'I would like to request early access to Operator Asset Exchange.',
+            '',
+            'Work email: ' + emailValue,
+            'Request source: Website coming soon page',
+            'Request type: Request Early Access',
+            '',
+            'Please contact me when verified operator account creation opens.',
+            '',
+            'Regards,'
+          ].join('\n');
+
+          window.location.href =
+            'mailto:matt@operatorassetexchange.com?subject=' +
+            encodeURIComponent(subject) +
+            '&body=' +
+            encodeURIComponent(body);
         });
       }
     })();
