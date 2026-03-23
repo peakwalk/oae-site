@@ -2,28 +2,48 @@
 
 .mobile-header-wrapper-style {
     position: fixed;
-    top: 0;
-    max-width: 370px;
-    width: 100%;
-    min-height: 100vh;
-    bottom: 0;
+    left: 0;
     right: 0;
+    top: var(--mobile-nav-offset, 68px);
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    bottom: 0;
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     background-color: #ffffff;
-    -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.09);
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.09);
-    z-index: 1003;
+    border-top: 1px solid #EAEAEA;
+    border-bottom: 0;
+    border-radius: 0;
+    -webkit-box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.06);
+    pointer-events: none;
+    z-index: 1005;
+    -webkit-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-transition-property: opacity, -webkit-transform, visibility;
+    transition-property: opacity, transform, visibility;
+    -webkit-transition-duration: 0.18s, 0.18s, 0s;
+    transition-duration: 0.18s, 0.18s, 0s;
+    -webkit-transition-timing-function: ease-in, ease-in, linear;
+    transition-timing-function: ease-in, ease-in, linear;
+    -webkit-transition-delay: 0s, 0s, 0.18s;
+    transition-delay: 0s, 0s, 0.18s;
 
     &.sidebar-visible {
         visibility: visible;
         opacity: 1;
-        -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-        transform: translate(0, 0);
+        pointer-events: auto;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-transition-duration: 0.22s, 0.22s, 0s;
+        transition-duration: 0.22s, 0.22s, 0s;
+        -webkit-transition-timing-function: ease-out, ease-out, linear;
+        transition-timing-function: ease-out, ease-out, linear;
+        -webkit-transition-delay: 0s, 0s, 0s;
+        transition-delay: 0s, 0s, 0s;
     }
 
     .mobile-header-wrapper-inner {
@@ -75,17 +95,30 @@
         }
 
         .mobile-header-content-area {
-            padding: 0px;
+            min-height: 100%;
+            padding: 8px 0 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
 
             .mobile-menu-wrap {
+                flex: 1 1 auto;
+                margin: 0;
+                padding: 0;
+                border-top: 0;
+
                 nav {
                     .mobile-menu {
-                        max-width: 370px;
+                        max-width: none;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
 
                         li {
                             display: block;
                             position: relative;
-                            padding: 13px 0;
+                            margin: 0;
+                            padding: 0;
 
                             &:last-child {
                                 border-bottom: none;
@@ -127,21 +160,29 @@
                             }
 
                             a {
-                                font-size: $font-md;
-                                line-height: 24px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                min-height: 44px;
+                                padding: 10px 16px;
+                                border: 0;
+                                border-radius: 0;
+                                background: transparent;
+                                box-shadow: none;
+                                font-size: 16px;
+                                line-height: 1.4;
                                 font-family: $font-manrope;
-                                text-transform: capitalize;
                                 font-weight: 500;
+                                letter-spacing: 0.2px;
                                 position: relative;
-                                display: inline-block;
-                                color: $color-brand-1;
+                                color: #024430;
                                 transition-duration: 0.2s;
                                 text-decoration: none;
                                 i {
                                     margin-right: 5px;
                                 }
                                 &:hover {
-                                    color: $color-success;
+                                    color: #024430;
                                 }
                             }
 
@@ -199,8 +240,7 @@
 
                             &:hover {
                                 &>a {
-                                    color: $color-success;
-                                    padding-left: 3px;
+                                    color: #024430;
                                     transition-duration: 0.2s;
                                 }
                             }
@@ -290,7 +330,7 @@
             .site-copyright {
                 font-size: $font-xs;
                 color: $color-gray-900;
-                padding-bottom: 20px;
+                padding-bottom: 0;
                 // position: absolute;
                 // left: 30px;
                 // bottom: 20px;

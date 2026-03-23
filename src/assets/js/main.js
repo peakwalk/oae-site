@@ -52,53 +52,75 @@
 
     const getMobilePanel = () =>
       document.querySelector(".mobile-header-wrapper-style");
-    const getOpenTriggers = () =>
+    const getMobileScrollContainer = () =>
+      document.querySelector(".mobile-header-wrapper-inner");
+    const getToggleTriggers = () =>
       Array.from(
-        document.querySelectorAll('[data-mobile-nav-action="open"]'),
+        document.querySelectorAll('[data-mobile-nav-action="toggle"]'),
       );
-    const getCloseTriggers = () =>
-      Array.from(
-        document.querySelectorAll('[data-mobile-nav-action="close"]'),
-      );
+    const getHeader = () => document.querySelector(".header-nextlevel");
 
-    const setOpenState = (isOpen) => {
+    const syncMobileOffset = () => {
+      const header = getHeader();
+      const offset = header
+        ? Math.round(header.offsetHeight || header.getBoundingClientRect().height)
+        : 0;
+      document.documentElement.style.setProperty(
+        "--mobile-nav-offset",
+        `${offset}px`,
+      );
+    };
+
+    const setOpenState = (isOpen, options = {}) => {
+      const { restoreFocus = true } = options;
       const mobilePanel = getMobilePanel();
       if (!mobilePanel) return;
 
+      syncMobileOffset();
       mobilePanel.classList.toggle("sidebar-visible", isOpen);
       mobilePanel.setAttribute("aria-hidden", String(!isOpen));
       body.classList.toggle("mobile-menu-active", isOpen);
-      getOpenTriggers().forEach((trigger) => {
-        trigger.setAttribute("aria-expanded", String(isOpen));
-      });
-      getCloseTriggers().forEach((trigger) => {
-        trigger.setAttribute("aria-expanded", String(isOpen));
-      });
 
       if (isOpen) {
-        window.scrollTo(0, 0);
-      } else if (lastOpenTrigger && typeof lastOpenTrigger.focus === "function") {
+        const scrollContainer = getMobileScrollContainer();
+        if (scrollContainer) {
+          scrollContainer.scrollTop = 0;
+        }
+      }
+
+      getToggleTriggers().forEach((trigger) => {
+        trigger.classList.toggle("burger-close", isOpen);
+        trigger.setAttribute("aria-expanded", String(isOpen));
+        trigger.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation" : "Open navigation",
+        );
+      });
+
+      if (
+        !isOpen &&
+        restoreFocus &&
+        lastOpenTrigger &&
+        typeof lastOpenTrigger.focus === "function"
+      ) {
         lastOpenTrigger.focus();
       }
     };
 
+    syncMobileOffset();
+
     document.addEventListener("click", (event) => {
       if (!(event.target instanceof Element)) return;
 
-      const openTrigger = event.target.closest('[data-mobile-nav-action="open"]');
-      if (openTrigger) {
-        event.preventDefault();
-        lastOpenTrigger = openTrigger;
-        setOpenState(true);
-        return;
-      }
-
-      const closeTrigger = event.target.closest(
-        '[data-mobile-nav-action="close"]',
+      const toggleTrigger = event.target.closest(
+        '[data-mobile-nav-action="toggle"]',
       );
-      if (closeTrigger) {
+      if (toggleTrigger) {
         event.preventDefault();
-        setOpenState(false);
+        lastOpenTrigger = toggleTrigger;
+        const mobilePanel = getMobilePanel();
+        const isOpen = mobilePanel?.classList.contains("sidebar-visible");
+        setOpenState(!isOpen);
         return;
       }
 
@@ -108,7 +130,7 @@
       }
 
       if (event.target.closest(".mobile-menu a")) {
-        setOpenState(false);
+        setOpenState(false, { restoreFocus: false });
       }
     });
 
@@ -118,9 +140,11 @@
       }
     });
 
+    window.addEventListener("scroll", syncMobileOffset, { passive: true });
     window.addEventListener("resize", () => {
+      syncMobileOffset();
       if (window.innerWidth >= 1200) {
-        setOpenState(false);
+        setOpenState(false, { restoreFocus: false });
       }
     });
   }

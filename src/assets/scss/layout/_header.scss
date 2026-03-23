@@ -292,16 +292,17 @@
 }
 
 .body-overlay-1 {
-    background: transparent;
-    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    height: auto;
     left: 0;
     opacity: 0;
     position: fixed;
-    top: 0;
+    top: var(--mobile-nav-offset, 68px);
+    bottom: 0;
     visibility: hidden;
     width: 100%;
     cursor: crosshair;
-    z-index: 1002;
+    z-index: 1004;
 }
 
 .mobile-menu-active .body-overlay-1 {

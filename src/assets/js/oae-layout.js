@@ -39,7 +39,7 @@
           aria-label="Open navigation"
           aria-controls="mobile-navigation"
           aria-expanded="false"
-          data-mobile-nav-action="open"
+          data-mobile-nav-action="toggle"
         >
           <span class="burger-icon-top"></span>
           <span class="burger-icon-mid"></span>
@@ -52,49 +52,22 @@
 <div class="mobile-header-wrapper-style" id="mobile-navigation" aria-hidden="true">
   <div class="mobile-header-wrapper-inner">
     <div class="mobile-header-content-area">
-      <div class="mobile-nav-top">
-        <div class="mobile-nav-brand">
-          <div class="brand-left">
-            <img alt="Operator Asset Exchange" src="${logoUrl}"/>
-            <div class="mobile-brand-copy">
-              <div class="eyebrow">Operator-only platform</div>
-              <div class="title">Operator Asset Exchange</div>
-            </div>
-          </div>
-          <button
-            type="button"
-            class="burger-icon burger-close burger-icon-white mobile-nav-close"
-            aria-label="Close navigation"
-            aria-controls="mobile-navigation"
-            aria-expanded="false"
-            data-mobile-nav-action="close"
-          >
-            <span class="burger-icon-top"></span>
-            <span class="burger-icon-mid"></span>
-            <span class="burger-icon-bottom"></span>
-          </button>
-        </div>
-        <div class="mobile-nav-summary">
-          <p>Search equipment, post urgent requests, and connect directly with verified operators.</p>
-        </div>
+      <div class="mobile-menu-wrap" role="presentation">
+        <nav aria-label="Mobile navigation">
+          <ul class="mobile-menu">
+            <li><a href="${homePrefix}#home">Home</a></li>
+            <li><a href="${homePrefix}#features">Features</a></li>
+            <li><a href="${homePrefix}#how-it-works">How It Works</a></li>
+            <li><a href="${homePrefix}#cases">Use Cases</a></li>
+            <li><a href="${homePrefix}#faq">FAQ</a></li>
+            <li><a href="${homePrefix}#pricing">Pricing</a></li>
+            <li><a href="${homePrefix}#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="mobile-nav-body">
-        <div class="mobile-menu-wrap mobile-header-border">
-          <nav>
-            <ul class="mobile-menu">
-              <li><a href="${homePrefix}#home">Home</a></li>
-              <li><a href="${homePrefix}#features">Features</a></li>
-              <li><a href="${homePrefix}#how-it-works">How It Works</a></li>
-              <li><a href="${homePrefix}#cases">Use Cases</a></li>
-              <li><a href="${homePrefix}#faq">FAQ</a></li>
-              <li><a href="${homePrefix}#contact">Contact</a></li>
-              <li><a href="${homePrefix}#pricing">Pricing</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="mobile-nav-footer">
-          <a class="btn btn-brand-1 hover-up btn-cta btn-nav-primary-mobile" href="${registerFile}">Create an Account</a>
-          <div class="mobile-nav-meta">Verified operator access. No brokers. No commission.</div>
+      <div class="mobile-menu-footer">
+        <div class="mobile-menu-footer-inner">
+          <div class="site-copyright">Operator Asset Exchange 2026. All rights reserved.</div>
         </div>
       </div>
     </div>
