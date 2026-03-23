@@ -33,16 +33,23 @@
         </nav>
       </div>
       <div class="header-right header-right-next">
-        <div class="burger-icon burger-icon-white burger-next d-xl-none">
+        <button
+          type="button"
+          class="burger-icon burger-icon-white burger-next d-xl-none"
+          aria-label="Open navigation"
+          aria-controls="mobile-navigation"
+          aria-expanded="false"
+          data-mobile-nav-action="open"
+        >
           <span class="burger-icon-top"></span>
           <span class="burger-icon-mid"></span>
           <span class="burger-icon-bottom"></span>
-        </div>
+        </button>
       </div>
     </div>
   </div>
 </header>
-<div class="mobile-header-wrapper-style">
+<div class="mobile-header-wrapper-style" id="mobile-navigation" aria-hidden="true">
   <div class="mobile-header-wrapper-inner">
     <div class="mobile-header-content-area">
       <div class="mobile-nav-top">
@@ -54,11 +61,18 @@
               <div class="title">Operator Asset Exchange</div>
             </div>
           </div>
-          <div class="burger-icon burger-close burger-icon-white mobile-nav-close">
+          <button
+            type="button"
+            class="burger-icon burger-close burger-icon-white mobile-nav-close"
+            aria-label="Close navigation"
+            aria-controls="mobile-navigation"
+            aria-expanded="false"
+            data-mobile-nav-action="close"
+          >
             <span class="burger-icon-top"></span>
             <span class="burger-icon-mid"></span>
             <span class="burger-icon-bottom"></span>
-          </div>
+          </button>
         </div>
         <div class="mobile-nav-summary">
           <p>Search equipment, post urgent requests, and connect directly with verified operators.</p>

@@ -113,6 +113,17 @@ border-color:rgba(53,105,89,.22);
 html {
   scroll-behavior: smooth;
 }
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 16px;
+  row-gap: 18px;
+}
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+}
 #home,
 #features,
 #how-it-works,
@@ -142,15 +153,16 @@ html {
     margin-left: auto;
   }
   .header .burger-icon {
-    width: 46px;
-    height: 46px;
-    border-radius: 14px;
-    background: #ffffff;
-    border: 1px solid rgba(26,115,232,0.14);
-    box-shadow: 0 12px 28px rgba(17,24,39,0.08);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    width: 24px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    display: block;
+    -webkit-appearance: none;
+    appearance: none;
   }
   .mobile-header-wrapper-style {
     width: 100%;
@@ -168,7 +180,7 @@ html {
     height: 100%;
   }
   .mobile-nav-top {
-    padding: 22px 22px 18px;
+    padding: 22px 56px 18px 22px;
     background: linear-gradient(135deg, rgba(26,115,232,0.08) 0%, rgba(255,111,0,0.08) 100%);
     border-bottom: 1px solid rgba(26,115,232,0.10);
   }
@@ -208,16 +220,13 @@ html {
     font-weight: 700;
   }
   .mobile-nav-close {
-    width: 44px;
-    height: 44px;
-    border-radius: 14px;
-    background: #ffffff;
-    border: 1px solid rgba(26,115,232,0.14);
-    box-shadow: 0 10px 24px rgba(17,24,39,0.08);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
   }
   .mobile-nav-summary {
     margin-top: 16px;
@@ -297,6 +306,51 @@ html {
     line-height: 1.6;
     color: #667085;
   }
+}
+
+@media (max-width: 767.98px) {
+  .hero-cta-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 14px;
+  }
+  .hero-cta-group .btn-cta {
+    width: 100%;
+    min-height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-cta-group .hero-cta-secondary {
+    width: auto;
+    align-self: flex-start;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #024430;
+    text-decoration: none;
+  }
+  .hero-cta-group .hero-cta-secondary::after {
+    content: "→";
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+
+body.mobile-menu-active {
+  overflow: hidden;
+}
+
+.burger-icon:focus-visible {
+  outline: 2px solid rgba(2, 68, 48, 0.18);
+  outline-offset: 6px;
 }
 
 .platform-feature-icon {

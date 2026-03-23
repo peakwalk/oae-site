@@ -48,47 +48,78 @@
 
   function initMobileMenu() {
     const body = document.body;
-    const mobilePanel = document.querySelector(".mobile-header-wrapper-style");
-    const overlay = document.querySelector(".body-overlay-1");
-    const triggers = Array.from(document.querySelectorAll(".burger-icon"));
-    const menuLinks = Array.from(document.querySelectorAll(".mobile-menu a"));
+    let lastOpenTrigger = null;
 
-    if (!mobilePanel || triggers.length === 0) return;
+    const getMobilePanel = () =>
+      document.querySelector(".mobile-header-wrapper-style");
+    const getOpenTriggers = () =>
+      Array.from(
+        document.querySelectorAll('[data-mobile-nav-action="open"]'),
+      );
+    const getCloseTriggers = () =>
+      Array.from(
+        document.querySelectorAll('[data-mobile-nav-action="close"]'),
+      );
 
     const setOpenState = (isOpen) => {
+      const mobilePanel = getMobilePanel();
+      if (!mobilePanel) return;
+
       mobilePanel.classList.toggle("sidebar-visible", isOpen);
+      mobilePanel.setAttribute("aria-hidden", String(!isOpen));
       body.classList.toggle("mobile-menu-active", isOpen);
-      triggers.forEach((trigger) => {
-        trigger.classList.toggle("burger-close", isOpen);
+      getOpenTriggers().forEach((trigger) => {
+        trigger.setAttribute("aria-expanded", String(isOpen));
+      });
+      getCloseTriggers().forEach((trigger) => {
+        trigger.setAttribute("aria-expanded", String(isOpen));
       });
 
       if (isOpen) {
         window.scrollTo(0, 0);
+      } else if (lastOpenTrigger && typeof lastOpenTrigger.focus === "function") {
+        lastOpenTrigger.focus();
       }
     };
 
-    triggers.forEach((trigger) => {
-      trigger.addEventListener("click", (event) => {
+    document.addEventListener("click", (event) => {
+      if (!(event.target instanceof Element)) return;
+
+      const openTrigger = event.target.closest('[data-mobile-nav-action="open"]');
+      if (openTrigger) {
         event.preventDefault();
-        const isOpen = mobilePanel.classList.contains("sidebar-visible");
-        setOpenState(!isOpen);
-      });
-    });
+        lastOpenTrigger = openTrigger;
+        setOpenState(true);
+        return;
+      }
 
-    if (overlay) {
-      overlay.addEventListener("click", () => {
+      const closeTrigger = event.target.closest(
+        '[data-mobile-nav-action="close"]',
+      );
+      if (closeTrigger) {
+        event.preventDefault();
         setOpenState(false);
-      });
-    }
+        return;
+      }
 
-    menuLinks.forEach((link) => {
-      link.addEventListener("click", () => {
+      if (event.target.closest(".body-overlay-1")) {
         setOpenState(false);
-      });
+        return;
+      }
+
+      if (event.target.closest(".mobile-menu a")) {
+        setOpenState(false);
+      }
     });
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
+        setOpenState(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1200) {
         setOpenState(false);
       }
     });
