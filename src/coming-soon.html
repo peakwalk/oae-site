@@ -162,9 +162,40 @@
       font-weight: 600;
       color: #c2410c;
     }
+    .form-status {
+      display: none;
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+    .form-status.is-success {
+      display: block;
+      color: #166534;
+      background: rgba(22, 101, 52, 0.08);
+      border: 1px solid rgba(22, 101, 52, 0.16);
+    }
+    .form-status.is-info {
+      display: block;
+      color: #1d4ed8;
+      background: rgba(29, 78, 216, 0.08);
+      border: 1px solid rgba(29, 78, 216, 0.16);
+    }
+    .form-status.is-error {
+      display: block;
+      color: #9a3412;
+      background: rgba(154, 52, 18, 0.08);
+      border: 1px solid rgba(154, 52, 18, 0.16);
+    }
     .form-control.is-invalid {
       border-color: #c2410c;
       box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.12);
+    }
+    .btn[disabled] {
+      opacity: 0.7;
+      cursor: not-allowed;
     }
     .coming-side-stack {
       display: grid;
@@ -329,13 +360,14 @@
             <div class="coming-form-card">
               <h3>Request early access</h3>
               <p>Use your company email and we will contact you when verified operator account creation opens for Operator Asset Exchange.</p>
-              <form id="notify-form" novalidate>
+              <form id="notify-form" novalidate data-api-endpoint="/api/public/early-access-requests">
                 <div class="notify-form-row">
-                  <input class="form-control" id="notify-email" name="email" type="email" placeholder="Enter your work email" aria-label="Work email" aria-describedby="notify-email-note notify-email-error" required />
+                  <input class="form-control" id="notify-email" name="email" type="email" placeholder="Enter your work email" aria-label="Work email" aria-describedby="notify-email-note notify-email-error notify-form-status" autocomplete="email" autocapitalize="off" inputmode="email" spellcheck="false" required />
                   <button class="btn btn-brand-1 hover-up btn-cta" type="submit">Request Early Access</button>
                 </div>
                 <div class="form-note" id="notify-email-note">Use a company email address.</div>
                 <div class="form-error" id="notify-email-error" aria-live="polite"></div>
+                <div class="form-status" id="notify-form-status" aria-live="polite"></div>
               </form>
             </div>
           </div>
@@ -377,7 +409,7 @@
                 </li>
               </ul>
               <div class="coming-contact-band">
-                Prefer to speak first? Contact <a href="mailto:matt@operatorassetexchange.com">matt@operatorassetexchange.com</a> for onboarding, rollout, or enterprise questions.
+                Prefer to speak first? Contact <a href="mailto:matt@operatoraccessexchange.com">matt@operatoraccessexchange.com</a> for onboarding, rollout, or enterprise questions.
               </div>
             </div>
           </div>
@@ -437,7 +469,12 @@
       var form = document.getElementById('notify-form');
       var email = document.getElementById('notify-email');
       var emailError = document.getElementById('notify-email-error');
-      if (form && email && emailError) {
+      var formStatus = document.getElementById('notify-form-status');
+      if (form && email && emailError && formStatus) {
+        var submitButton = form.querySelector('button[type="submit"]');
+        var defaultSubmitLabel = submitButton ? submitButton.textContent : 'Request Early Access';
+        var apiEndpoint = form.getAttribute('data-api-endpoint') || '/api/public/early-access-requests';
+
         function showEmailError(message) {
           email.classList.add('is-invalid');
           email.setAttribute('aria-invalid', 'true');
@@ -450,6 +487,67 @@
           email.removeAttribute('aria-invalid');
           emailError.textContent = '';
           emailError.style.display = 'none';
+        }
+
+        function showFormStatus(message, status) {
+          formStatus.className = 'form-status is-' + status;
+          formStatus.textContent = message;
+        }
+
+        function clearFormStatus() {
+          formStatus.className = 'form-status';
+          formStatus.textContent = '';
+        }
+
+        function setSubmitting(isSubmitting) {
+          if (!submitButton) {
+            return;
+          }
+
+          submitButton.disabled = isSubmitting;
+          submitButton.setAttribute('aria-disabled', isSubmitting ? 'true' : 'false');
+          submitButton.textContent = isSubmitting ? 'Sending...' : defaultSubmitLabel;
+          form.setAttribute('aria-busy', isSubmitting ? 'true' : 'false');
+        }
+
+        function submitEarlyAccessRequest(emailValue) {
+          if (!apiEndpoint) {
+            showFormStatus(
+              'Thank you. Your early access request has been noted. Our team will review it and contact you at your work email.',
+              'success'
+            );
+            form.reset();
+            return Promise.resolve();
+          }
+
+          return fetch(apiEndpoint, {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              email: emailValue,
+              source: 'coming-soon-page',
+              requestType: 'early-access'
+            })
+          }).then(function (response) {
+            if (!response.ok) {
+              throw new Error('Request failed with status ' + response.status);
+            }
+
+            showFormStatus(
+              'Request sent. Matt has received your early access request and the team will follow up after verification.',
+              'success'
+            );
+            form.reset();
+          }).catch(function () {
+            showFormStatus(
+              'We could not submit your request right now. Please try again shortly.',
+              'error'
+            );
+          });
         }
 
         function validateEmail() {
@@ -471,11 +569,13 @@
         }
 
         email.addEventListener('input', function () {
-          if (!emailError.textContent) {
-            return;
+          if (emailError.textContent) {
+            validateEmail();
           }
 
-          validateEmail();
+          if (formStatus.textContent) {
+            clearFormStatus();
+          }
         });
 
         form.addEventListener('submit', function (event) {
@@ -486,26 +586,11 @@
             return;
           }
 
-          var subject = 'Website - Notification';
-          var body = [
-            'Hello Matt,',
-            '',
-            'I would like to request early access to Operator Asset Exchange.',
-            '',
-            'Work email: ' + emailValue,
-            'Request source: Website coming soon page',
-            'Request type: Request Early Access',
-            '',
-            'Please contact me when verified operator account creation opens.',
-            '',
-            'Regards,'
-          ].join('\n');
-
-          window.location.href =
-            'mailto:matt@operatorassetexchange.com?subject=' +
-            encodeURIComponent(subject) +
-            '&body=' +
-            encodeURIComponent(body);
+          clearFormStatus();
+          setSubmitting(true);
+          submitEarlyAccessRequest(emailValue).finally(function () {
+            setSubmitting(false);
+          });
         });
       }
     })();
