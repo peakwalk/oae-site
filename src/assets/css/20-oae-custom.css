@@ -609,6 +609,19 @@ html {
 .pricing-membership-section .pricing-card{
   width:100%;
 }
+@media (max-width: 991.98px){
+  .pricing-membership-section .card-badge{
+    position:static;
+    top:auto;
+    right:auto;
+    display:inline-flex;
+    align-self:flex-end;
+    margin:0 0 14px;
+    max-width:100%;
+    line-height:1.2;
+    text-align:center;
+  }
+}
 @media (min-width: 992px){
   .pricing-membership-section .pricing-card-col{
     flex:0 0 calc(50% - 15px);
