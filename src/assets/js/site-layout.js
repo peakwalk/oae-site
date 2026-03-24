@@ -1,7 +1,11 @@
 (function () {
-  var logoUrl = new URL('../images/brand/logo.png', import.meta.url).toString();
+  function getLogoUrl() {
+    var asset = document.getElementById('site-brand-logo-asset');
+    var src = asset && asset.getAttribute('src');
+    return src || 'assets/images/brand/logo.png';
+  }
 
-  function buildHeader(page) {
+  function buildHeader(page, logoUrl) {
     var isMain = page === 'main';
     var homeFile = 'index.html';
     var registerFile = 'coming-soon.html';
@@ -120,8 +124,9 @@
     var body = document.body;
     if (!body) return;
     var page = body.getAttribute('data-layout-page') || 'main';
+    var logoUrl = getLogoUrl();
     var headerMount = document.getElementById('site-header');
-    if (headerMount) headerMount.outerHTML = buildHeader(page);
+    if (headerMount) headerMount.outerHTML = buildHeader(page, logoUrl);
     var footerMount = document.getElementById('site-footer');
     if (footerMount) footerMount.outerHTML = buildFooter();
   }

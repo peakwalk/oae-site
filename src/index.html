@@ -16,12 +16,7 @@
 <link href="assets/scss/site.scss" rel="stylesheet"/>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXHQ24TMF9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YXHQ24TMF9');
-  </script>
+  <script src="assets/js/site-analytics.js"></script>
   <title>
    Operator Asset Exchange | Source Oilfield Equipment Directly
   </title>
@@ -1709,33 +1704,10 @@
 </main>
 <!-- Footer -->
 <div id="site-footer"></div>
-<script src="assets/js/site-layout.js" type="module"></script>
+<img id="site-brand-logo-asset" src="assets/images/brand/logo.png" alt="" hidden aria-hidden="true">
+<script src="assets/js/site-layout.js"></script>
 <script src="assets/js/vendors/wow.js"></script>
-<script src="assets/js/site-chrome.js?v=7.0.0"></script>
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-  var faqButtons = document.querySelectorAll(".faq-question");
-
-  faqButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      var item = button.closest(".faq-item");
-      var isOpen = item.classList.contains("active");
-
-      document.querySelectorAll(".faq-item").forEach(function (faqItem) {
-        faqItem.classList.remove("active");
-        var faqButton = faqItem.querySelector(".faq-question");
-        if (faqButton) {
-          faqButton.setAttribute("aria-expanded", "false");
-        }
-      });
-
-      if (!isOpen) {
-        item.classList.add("active");
-        button.setAttribute("aria-expanded", "true");
-      }
-    });
-  });
-});
-  </script>
+<script src="assets/js/site-chrome.js"></script>
+<script src="assets/js/pages/home.js"></script>
 </body>
 </html>

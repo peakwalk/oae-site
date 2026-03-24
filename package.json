@@ -9,6 +9,7 @@
     "dev": "parcel serve src/index.html src/coming-soon.html src/privacy-policy.html src/cookie-policy.html src/terms-of-use.html --no-cache --dist-dir public --open",
     "prebuild": "npm run clean:dist",
     "build": "parcel build src/index.html src/coming-soon.html src/privacy-policy.html src/cookie-policy.html src/terms-of-use.html --dist-dir public --public-url . --no-source-maps",
+    "postbuild": "node scripts/sanitize-parcel-build.js",
     "typecheck": "tsc --noEmit",
     "commit": "cz",
     "push": "git push --follow-tags origin $(git rev-parse --abbrev-ref HEAD)",
