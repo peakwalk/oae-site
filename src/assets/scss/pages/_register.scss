@@ -26,17 +26,17 @@
     height: 8px;
     display: inline-block;
     width: 100%;
-    background: url(../imgs/page/register/line.png) no-repeat top left;
+    background: linear-gradient(90deg, $color-brand-1, $color-brand-3, $color-success);
     background-size: contain;
 }
 .icon-password {
-    background-image: url(../imgs/page/register/password.svg);
+    background-image: none;
     background-repeat: no-repeat;
     background-position: right 15px center;
     padding-right: 40px;
 }
 .icon-name {
-    background-image: url(../imgs/page/register/name.svg);
+    background-image: none;
     background-repeat: no-repeat;
     background-position: right 15px center;
     padding-right: 40px;

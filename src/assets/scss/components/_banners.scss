@@ -42,7 +42,7 @@
             content: "";
             height: 100%;
             width: 100%;
-            background: url(../imgs/page/homepage3/bg-banner.png) no-repeat center;
+            background: none;
             background-size: contain;
             position: absolute;
             top: 0px;
@@ -57,7 +57,7 @@
     }
 }
 .banner-4 {
-    background: $color-brand-2 url(../imgs/page/homepage4/finger.png) no-repeat top right;
+    background: $color-brand-2;
     position: relative;
     .container {
         position: relative;
@@ -71,12 +71,12 @@
         width: 133px;
         z-index: 1;
         content: "";
-        background: url(../imgs/page/homepage4/finger-2.png) no-repeat bottom left;
+        background: none;
         background-size: contain;
     }
 }
 .banner-about {
-    background: url(../imgs/page/about/finger.png) no-repeat top 10px right 20px;
+    background: none;
 }
 @keyframes hero-thumb-animation {
     0% {

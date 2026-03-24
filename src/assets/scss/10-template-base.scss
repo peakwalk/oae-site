@@ -29,7 +29,6 @@
 
 // Page-specific partials still needed by the current site
 @use "pages/homepage2";
-@use "pages/register";
 
 // Responsive rules remain centralized for the first migration pass.
 @use "layout/responsive";

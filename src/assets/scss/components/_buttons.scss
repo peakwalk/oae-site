@@ -100,14 +100,14 @@
         }
     }
     &.btn-play {
-        background: url(../imgs/page/homepage1/btn-play.svg) no-repeat left center;
+        background: none;
         height: 50px;
         padding-left: 55px;
         color: $color-brand-2;
         line-height: 30px !important;
     }
     &.btn-play-white {
-        background: url(../imgs/page/homepage9/play.png) no-repeat left center;
+        background: none;
         color: $color-brand-1;
     }
     &.btn-border-brand-1 {
@@ -146,7 +146,7 @@
         left: 0px;
         right: 0px;
         margin: auto;
-        background: url(../imgs/page/homepage3/play.png) no-repeat center;
+        background: none;
         background-size: contain;
     }
     &.btn-border {
@@ -197,7 +197,7 @@
         line-height: 18px;
         font-size: 12px;
         padding: 8px 15px 10px 0px;
-        background: url(../imgs/page/shop/arrow.svg) no-repeat right center;
+        background: none;
     }
     &.btn-wish {
         padding-left: 17px;

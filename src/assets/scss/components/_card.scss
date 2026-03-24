@@ -96,7 +96,7 @@
     width: 100%;
     padding: 30px 30px 20px 30px;
     border: 1px solid $color-gray-80;
-    background: $color-white url(../imgs/page/homepage1/quote.svg) no-repeat top 20px right 30px;
+    background-color: $color-white;
     transition-duration: 0.2s;
     a {
         text-decoration: none;
@@ -341,7 +341,7 @@
     }
     .card-info {
         .icon-up {
-            background: url(../imgs/page/homepage3/up.svg) no-repeat right top 8px;
+            background: none;
         }
     }
     &:hover {
@@ -690,7 +690,7 @@
     .card-info {
         position: relative;
         padding-left: 64px;
-        background: url(../imgs/page/homepage7/quote.png) no-repeat top left;
+        background: none;
         .rating-review {
             margin-bottom: 10px;
             img {
