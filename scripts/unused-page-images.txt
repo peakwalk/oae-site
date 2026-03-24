@@ -1,6 +1,6 @@
 # Unused page images for the current public site
-# Generated on 2026-03-24 using current HTML, layout JS, and active SCSS imports.
-# Paths are relative to the git repository root and are safe to pass to git rm.
+# Generated on 2026-03-24 before the active assets reorganization from src/assets/imgs to src/assets/images.
+# Paths are relative to the git repository root at generation time and should be treated as historical cleanup input.
 src/assets/imgs/page/404/404.png
 src/assets/imgs/page/about/arrow-down.png
 src/assets/imgs/page/about/check.svg

@@ -142,16 +142,6 @@
     display: inline-block;
     width: 100%;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        height: 100px;
-        width: 111px;
-        background: url(../imgs/template/newsletter_finger_top.png) no-repeat top right;
-        background-size: cover;
-    }
     .img-main {
         border-radius: 565px;
         max-width: 100%;
@@ -234,57 +224,4 @@
 }
 footer a {
     text-decoration: none;
-}
-.icon-socials {
-    display: inline-block;
-    margin-right: 8px;
-    height: 21px;
-    width: 21px;
-    transition-duration: 0.2s;
-    vertical-align: middle;
-    background-size: contain !important;
-    &:hover {
-        transform: translateY(-3px);
-        transition-duration: 0.2s;
-    }
-    &.icon-facebook {
-        background: url(../imgs/template/icons/fb.svg) no-repeat 0px 0px;
-        transition-duration: 0.2s;
-        &:hover {
-            background: url(../imgs/template/icons/fb.svg) no-repeat 0px 0px;
-            transition-duration: 0.2s;
-        }
-    }
-    &.icon-twitter {
-        background: url(../imgs/template/icons/tw.svg) no-repeat 0px 0px;
-        transition-duration: 0.2s;
-        &:hover {
-            background: url(../imgs/template/icons/tw.svg) no-repeat 0px 0px;
-            transition-duration: 0.2s;
-        }
-    }
-    &.icon-instagram {
-        background: url(../imgs/template/icons/inst.svg) no-repeat 0px 0px;
-        transition-duration: 0.2s;
-        &:hover {
-            background: url(../imgs/template/icons/inst.svg) no-repeat 0px 0px;
-            transition-duration: 0.2s;
-        }
-    }
-    &.icon-linkedin {
-        background: url(../imgs/template/icons/in.svg) no-repeat 0px 0px;
-        transition-duration: 0.2s;
-        &:hover {
-            background: url(../imgs/template/icons/in.svg) no-repeat 0px 0px;
-            transition-duration: 0.2s;
-        }
-    }
-    &.icon-youtube {
-        background: url(../imgs/template/icons/youtube.svg) no-repeat 0px 0px;
-        transition-duration: 0.2s;
-        &:hover {
-            background: url(../imgs/template/icons/youtube.svg) no-repeat 0px 0px;
-            transition-duration: 0.2s;
-        }
-    }
 }

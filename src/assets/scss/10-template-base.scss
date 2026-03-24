@@ -28,7 +28,7 @@
 @use "layout/spacing";
 
 // Page-specific partials still needed by the current site
-@use "pages/homepage2";
+@use "pages/home";
 
 // Responsive rules remain centralized for the first migration pass.
 @use "layout/responsive";
