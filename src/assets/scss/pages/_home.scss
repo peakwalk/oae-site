@@ -30,6 +30,242 @@
         }
     }
 }
+.home-regions-heading {
+    max-width: 860px;
+    margin: 0 auto;
+    line-height: 1.45;
+}
+.home-regions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.home-regions-grid__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-regions-grid__row--top {
+    gap: 52px;
+}
+.home-regions-grid__row--bottom {
+    gap: 94px;
+}
+.home-regions-card {
+    --home-region-map-left: 30px;
+    --home-region-map-top: 20px;
+    --home-region-map-width: 60px;
+    --home-region-map-height: 56px;
+    --home-region-map-ink-width: 52px;
+    --home-region-label-gap: 2px;
+    --home-region-label-offset-x: 0px;
+    --home-region-label-left: calc(
+        var(--home-region-map-left) + var(--home-region-map-ink-width) + var(--home-region-label-gap) +
+            var(--home-region-label-offset-x)
+    );
+    --home-region-label-top: 33px;
+    --home-region-label-width: 88px;
+    --home-region-label-font-size: 17px;
+    --home-region-label-line-height: 0.9;
+    --home-region-label-font-weight: 800;
+    position: relative;
+    width: 200px;
+    height: 100px;
+    flex: 0 0 200px;
+}
+.home-regions-card--africa {
+    --home-region-map-left: 22px;
+    --home-region-map-top: 16px;
+    --home-region-map-width: 58px;
+    --home-region-map-height: 54px;
+    --home-region-map-ink-width: 56px;
+    --home-region-label-offset-x: 3px;
+    --home-region-label-top: 30px;
+    --home-region-label-width: 100px;
+    --home-region-label-font-size: 22px;
+    --home-region-label-line-height: 0.9;
+    --home-region-label-font-weight: 800;
+}
+.home-regions-card--asia-pacific {
+    --home-region-map-left: 18px;
+    --home-region-map-top: 12px;
+    --home-region-map-width: 59px;
+    --home-region-map-height: 54px;
+    --home-region-map-ink-width: 63px;
+    --home-region-label-offset-x: 1px;
+    --home-region-label-top: 27px;
+    --home-region-label-width: 94px;
+    --home-region-label-font-size: 17px;
+    --home-region-label-line-height: 0.9;
+    --home-region-label-font-weight: 800;
+}
+.home-regions-card--europe {
+    --home-region-map-left: 18px;
+    --home-region-map-top: 16px;
+    --home-region-map-width: 62px;
+    --home-region-map-height: 56px;
+    --home-region-map-ink-width: 55px;
+    --home-region-label-offset-x: 8px;
+    --home-region-label-top: 36px;
+    --home-region-label-width: 105px;
+    --home-region-label-font-size: 20px;
+    --home-region-label-line-height: 0.9;
+    --home-region-label-font-weight: 800;
+}
+.home-regions-card--middle-east {
+    --home-region-map-left: 17px;
+    --home-region-map-top: 18px;
+    --home-region-map-width: 58px;
+    --home-region-map-height: 54px;
+    --home-region-map-ink-width: 56px;
+    --home-region-label-offset-x: 4px;
+    --home-region-label-top: 27px;
+    --home-region-label-width: 95px;
+    --home-region-label-font-size: 17px;
+    --home-region-label-line-height: 1.0;
+    --home-region-label-font-weight: 800;
+}
+.home-regions-card--north-america {
+    --home-region-map-left: 12px;
+    --home-region-map-top: 8px;
+    --home-region-map-width: 69px;
+    --home-region-map-height: 65px;
+    --home-region-map-ink-width: 58px;
+    --home-region-label-offset-x: 16px;
+    --home-region-label-top: 27px;
+    --home-region-label-width: 111px;
+    --home-region-label-font-size: 17px;
+    --home-region-label-line-height: 0.9;
+    --home-region-label-font-weight: 800;
+}
+.home-regions-card--australia {
+    --home-region-map-left: 20px;
+    --home-region-map-top: 14px;
+    --home-region-map-width: 56px;
+    --home-region-map-height: 52px;
+    --home-region-map-ink-width: 54px;
+    --home-region-label-offset-x: 4px;
+    --home-region-label-top: 22px;
+    --home-region-label-width: 110px;
+    --home-region-label-font-size: 14px;
+    --home-region-label-line-height: 1;
+    --home-region-label-font-weight: 700;
+}
+.home-regions-card--latin-america {
+    --home-region-map-left: 15px;
+    --home-region-map-top: 1px;
+    --home-region-map-width: 70px;
+    --home-region-map-height: 74px;
+    --home-region-map-ink-width: 54px;
+    --home-region-label-offset-x: 10px;
+    --home-region-label-top: 22px;
+    --home-region-label-width: 96px;
+    --home-region-label-font-size: 16px;
+    --home-region-label-line-height: 1;
+    --home-region-label-font-weight: 800;
+}
+.home-regions-card__icon {
+    position: absolute;
+    left: var(--home-region-map-left);
+    top: var(--home-region-map-top);
+    width: var(--home-region-map-width);
+    height: var(--home-region-map-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-regions-card__icon img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.home-regions-card__label {
+    position: absolute;
+    left: var(--home-region-label-left);
+    top: var(--home-region-label-top);
+    max-width: var(--home-region-label-width);
+    color: $color-brand-1;
+    font-family: $font-chivo;
+    font-size: var(--home-region-label-font-size);
+    line-height: var(--home-region-label-line-height);
+    font-weight: var(--home-region-label-font-weight);
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-align: left;
+}
+@include media-breakpoint-down(md) {
+    .home-regions-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px 18px;
+    }
+    .home-regions-grid__row {
+        display: contents;
+    }
+    .home-regions-card {
+        position: static;
+        width: auto;
+        height: auto;
+        flex: initial;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        text-align: center;
+    }
+    .home-regions-card__icon {
+        position: static;
+        width: 84px;
+        min-height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .home-regions-card__icon img {
+        width: auto;
+        max-width: 70px;
+        max-height: 64px;
+    }
+    .home-regions-card__label {
+        position: static;
+        max-width: 140px;
+        font-size: 14px;
+        line-height: 1.18;
+        text-align: center;
+    }
+}
+@include media-breakpoint-down(md) {
+    .home-regions-heading {
+        max-width: 540px;
+    }
+    .home-regions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 14px;
+    }
+    .home-regions-card {
+        gap: 8px;
+    }
+    .home-regions-card__icon {
+        min-height: 56px;
+    }
+    .home-regions-card__icon img {
+        max-width: 62px;
+        max-height: 54px;
+    }
+    .home-regions-card__label {
+        max-width: 128px;
+        font-size: 12px;
+        letter-spacing: 0.035em;
+    }
+}
+@include media-breakpoint-down(sm) {
+    .home-regions-grid {
+        gap: 18px 10px;
+    }
+}
 .border-top {
     border-top: 1px solid $color-gray-50;
 }
