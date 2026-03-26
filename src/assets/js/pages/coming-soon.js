@@ -1,5 +1,5 @@
 (() => {
-  const launchDate = new Date('2026-04-06T09:00:00');
+  const launchDate = new Date('2026-04-10T09:00:00');
 
   function initLaunchDate() {
     const dateDisplay = document.getElementById('launch-date-display');
