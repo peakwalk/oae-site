@@ -79,7 +79,7 @@ pipeline {
       agent { label "${env.NODE_SELECTED}" }
       steps {
         _nodeCli { NODE_CLI ->
-          sh NODE_CLI.replaceAll('%s', 'corepack enable && yarn install --frozen-lockfile')
+          sh NODE_CLI.replaceAll('%s', './scripts/ci/run-yarn-command.mjs install --frozen-lockfile')
         }
       }
     }
@@ -92,7 +92,7 @@ pipeline {
       agent { label "${env.NODE_SELECTED}" }
       steps {
         _nodeCli { NODE_CLI ->
-          sh NODE_CLI.replaceAll('%s', 'corepack enable && yarn typecheck')
+          sh NODE_CLI.replaceAll('%s', './scripts/ci/run-yarn-command.mjs typecheck')
         }
       }
     }
@@ -101,7 +101,7 @@ pipeline {
       agent { label "${env.NODE_SELECTED}" }
       steps {
         _nodeCli { NODE_CLI ->
-          sh NODE_CLI.replaceAll('%s', 'corepack enable && yarn build:release')
+          sh NODE_CLI.replaceAll('%s', './scripts/ci/run-yarn-command.mjs build:release')
         }
       }
     }
@@ -129,7 +129,7 @@ pipeline {
       agent { label "${env.DOCKER_BUILD_NODE}" }
       steps {
         _nodeCli { NODE_CLI ->
-          sh NODE_CLI.replaceAll('%s', 'node ./scripts/docker/build-image.mjs site')
+          sh NODE_CLI.replaceAll('%s', './scripts/docker/build-image.mjs site')
         }
       }
     }
@@ -138,7 +138,7 @@ pipeline {
       agent { label "${env.DOCKER_BUILD_NODE}" }
       steps {
         _nodeCli { NODE_CLI ->
-          sh NODE_CLI.replaceAll('%s', 'node ./scripts/docker/push-image.mjs site')
+          sh NODE_CLI.replaceAll('%s', './scripts/docker/push-image.mjs site')
         }
       }
     }
