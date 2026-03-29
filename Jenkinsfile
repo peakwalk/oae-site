@@ -44,6 +44,12 @@ pipeline {
           env.DOCKER_BUILD_NODE = env.NODE_SELECTED == env.NODE_MAC1
             ? env.NODE_MASTER
             : env.NODE_SELECTED
+          env.HAS_TYPESCRIPT_PROJECT = (
+            fileExists('tsconfig.json')
+            || fileExists('tsconfig.app.json')
+            || fileExists('tsconfig.base.json')
+            || fileExists('tsconfig.build.json')
+          ).toString()
           env.SITE_SHORT_VERSION_TAG = "${env.REPOSITORY}/site:${env.VERSION}"
 
           currentBuild.displayName = "#${env.BUILD_NUMBER} ${env.VERSION}-${env.STAGE}"
@@ -61,6 +67,7 @@ pipeline {
           echo "FULL_VERSION: ${env.FULL_VERSION}"
           echo "BUILD_NODE_WORKSPACE: ${env.BUILD_NODE_WORKSPACE}"
           echo "REPOSITORY: ${env.REPOSITORY}"
+          echo "HAS_TYPESCRIPT_PROJECT: ${env.HAS_TYPESCRIPT_PROJECT}"
           echo "SITE_SHORT_VERSION_TAG: ${env.SITE_SHORT_VERSION_TAG}"
           echo "NODE_NODE_IMAGE: ${env.NODE_NODE_IMAGE}"
           echo "USE_DOCKER_ON_DARWIN: true"
@@ -80,7 +87,7 @@ pipeline {
     stage('Typecheck') {
       when {
         beforeAgent true
-        expression { return hasTypeScriptProject() }
+        expression { return env.HAS_TYPESCRIPT_PROJECT == 'true' }
       }
       agent { label "${env.NODE_SELECTED}" }
       steps {
@@ -194,13 +201,6 @@ do
   docker image rm -f "\${tag}" >/dev/null 2>&1 || true
 done
 """
-}
-
-def hasTypeScriptProject() {
-  return fileExists('tsconfig.json')
-    || fileExists('tsconfig.app.json')
-    || fileExists('tsconfig.base.json')
-    || fileExists('tsconfig.build.json')
 }
 
 def withSecretEnv(List<Map> varAndValueList, Closure closure) {
