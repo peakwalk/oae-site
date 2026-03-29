@@ -57,8 +57,9 @@
     const email = document.getElementById('notify-email');
     const emailError = document.getElementById('notify-email-error');
     const formStatus = document.getElementById('notify-form-status');
+    const honeypot = document.getElementById('notify-website');
 
-    if (!form || !email || !emailError || !formStatus) {
+    if (!form || !email || !emailError || !formStatus || !honeypot) {
       return;
     }
 
@@ -108,7 +109,7 @@
     const submitEarlyAccessRequest = (emailValue) => {
       if (!apiEndpoint) {
         showFormStatus(
-          'Thank you. Your early access request has been noted. Our team will review it and contact you at your work email.',
+          'Request received. We will contact you when verified operator onboarding opens.',
           'success',
         );
         form.reset();
@@ -117,7 +118,6 @@
 
       return fetch(apiEndpoint, {
         method: 'POST',
-        credentials: 'same-origin',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json',
@@ -126,6 +126,7 @@
           email: emailValue,
           source: 'coming-soon-page',
           requestType: 'early-access',
+          website: honeypot.value,
         }),
       })
         .then((response) => {
@@ -134,7 +135,7 @@
           }
 
           showFormStatus(
-            'Request sent. Matt has received your early access request and the team will follow up after verification.',
+            'Request received. We will contact you when verified operator onboarding opens.',
             'success',
           );
           form.reset();
