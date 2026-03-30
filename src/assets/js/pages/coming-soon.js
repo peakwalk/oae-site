@@ -96,10 +96,14 @@
     };
 
     const setSubmitting = (isSubmitting) => {
+      email.disabled = isSubmitting;
+      email.setAttribute('aria-disabled', isSubmitting ? 'true' : 'false');
+
       if (!submitButton) return;
 
       submitButton.disabled = isSubmitting;
       submitButton.setAttribute('aria-disabled', isSubmitting ? 'true' : 'false');
+      submitButton.classList.toggle('is-loading', isSubmitting);
       submitButton.textContent = isSubmitting
         ? 'Sending...'
         : defaultSubmitLabel;
@@ -186,6 +190,7 @@
       }
 
       clearFormStatus();
+      showFormStatus('Submitting your request...', 'info');
       setSubmitting(true);
       submitEarlyAccessRequest(emailValue).finally(() => {
         setSubmitting(false);

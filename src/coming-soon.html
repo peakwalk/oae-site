@@ -147,6 +147,24 @@
       min-height: 56px;
       white-space: nowrap;
     }
+    .notify-form-row .btn.is-loading {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .notify-form-row .btn.is-loading::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      border-top-color: #ffffff;
+      animation: notify-submit-spin .8s linear infinite;
+    }
+    @keyframes notify-submit-spin {
+      to { transform: rotate(360deg); }
+    }
     .form-note {
       margin-top: 12px;
       font-size: 13px;
@@ -189,6 +207,11 @@
     .form-control.is-invalid {
       border-color: #c2410c;
       box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.12);
+    }
+    .form-control[disabled] {
+      background: #f8fafc;
+      cursor: not-allowed;
+      opacity: 0.75;
     }
     .btn[disabled] {
       opacity: 0.7;
