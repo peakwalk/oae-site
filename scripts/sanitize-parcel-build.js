@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const publicDir = path.resolve(__dirname, '..', 'public');
+const launchDateToken = '{{LAUNCH_DATE}}';
 
 if (!fs.existsSync(publicDir)) {
   process.exit(0);
@@ -68,6 +69,45 @@ function collectHtmlReferences() {
   return references;
 }
 
+function formatLaunchDate(dateIso) {
+  const launchDate = new Date(dateIso);
+  if (Number.isNaN(launchDate.getTime())) {
+    return null;
+  }
+
+  return launchDate.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
+function replaceLaunchDateTokens(filePath) {
+  const original = fs.readFileSync(filePath, 'utf8');
+  if (!original.includes(launchDateToken)) {
+    return;
+  }
+
+  const launchDateMatch = original.match(
+    /\bdata-launch-date-iso=(?:"([^"]+)"|([^>\s]+))/,
+  );
+  if (!launchDateMatch) {
+    return;
+  }
+
+  const launchDateText = formatLaunchDate(
+    launchDateMatch[1] || launchDateMatch[2],
+  );
+  if (!launchDateText) {
+    return;
+  }
+
+  const updated = original.replaceAll(launchDateToken, launchDateText);
+  if (updated !== original) {
+    fs.writeFileSync(filePath, updated);
+  }
+}
+
 function stripSourceMapComments(filePath) {
   const original = fs.readFileSync(filePath, 'utf8');
   const cleaned = original
@@ -110,10 +150,15 @@ async function waitForStableOutput() {
 }
 
 function runCleanupPass() {
+  const htmlFiles = walk(publicDir, (filePath) => filePath.endsWith('.html'));
   const referencedAssets = collectHtmlReferences();
   const jsFiles = walk(publicDir, (filePath) => filePath.endsWith('.js'));
   const cssFiles = walk(publicDir, (filePath) => filePath.endsWith('.css'));
   const mapFiles = walk(publicDir, (filePath) => filePath.endsWith('.map'));
+
+  for (const filePath of htmlFiles) {
+    replaceLaunchDateTokens(filePath);
+  }
 
   for (const filePath of [...jsFiles, ...cssFiles]) {
     stripSourceMapComments(filePath);

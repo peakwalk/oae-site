@@ -1,18 +1,46 @@
 (() => {
-  const launchDate = new Date('2026-04-10T09:00:00');
+  const launchDateToken = '{{LAUNCH_DATE}}';
+  const launchDateIso = document.body?.dataset.launchDateIso || '';
+  const launchDate = launchDateIso ? new Date(launchDateIso) : null;
+  const hasValidLaunchDate = Boolean(launchDate) && !Number.isNaN(launchDate.getTime());
+  const launchDateText = hasValidLaunchDate
+    ? launchDate.toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+      })
+    : '';
 
-  function initLaunchDate() {
-    const dateDisplay = document.getElementById('launch-date-display');
-    if (!dateDisplay) return;
+  function initLaunchDateContent() {
+    if (!hasValidLaunchDate) return;
 
-    dateDisplay.textContent = launchDate.toLocaleDateString('en-GB', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
+    document.querySelectorAll('[data-launch-date]').forEach((element) => {
+      element.textContent = launchDateText;
+
+      if (element.tagName === 'TIME') {
+        element.setAttribute('datetime', launchDateIso);
+      }
     });
+
+    document
+      .querySelectorAll('[data-launch-date-attr]')
+      .forEach((element) => {
+        const attributeName = element.getAttribute('data-launch-date-attr');
+        if (!attributeName) return;
+
+        const template = element.getAttribute(attributeName);
+        if (!template) return;
+
+        element.setAttribute(
+          attributeName,
+          template.replaceAll(launchDateToken, launchDateText),
+        );
+      });
   }
 
   function initCountdown() {
+    if (!hasValidLaunchDate) return;
+
     const units = {
       days: document.querySelector('[data-unit="days"]'),
       hours: document.querySelector('[data-unit="hours"]'),
@@ -199,7 +227,7 @@
   }
 
   function initComingSoonPage() {
-    initLaunchDate();
+    initLaunchDateContent();
     initCountdown();
     initNotifyForm();
   }
